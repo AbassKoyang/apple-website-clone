@@ -3,7 +3,7 @@ import {ScrollTrigger} from 'gsap/all';
 import gsap from 'gsap';
 
 import {rightImg, watchImg} from '../utils/index'
-import VideoCarousel from '../../VideoCarousel';
+import VideoCarousel from '../components/VideoCarousel';
 
 gsap.registerPlugin(ScrollTrigger);
 const Highlights = () => {
