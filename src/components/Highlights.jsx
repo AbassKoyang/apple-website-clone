@@ -10,12 +10,14 @@ const Highlights = () => {
   useGSAP(() => {
     gsap.to('#title', {opacity: 1, y: 0, scrollTrigger: {
       trigger: '#title',
-    }, yoyo: true, yoyoEase: true})
+      toggleActions: "play reverse play reverse",
+      start: 'top bottom'
+    },})
   }, [])
   return (
-    <section id='highlights' className='w-screen overflow-hidden h-full common-padding bg-zinc'>
+    <section id='highlights' className='w-screen overflow-x-hidden common-padding bg-zinc'>
       <div className="screen-max-width">
-          <h1 id="title" className="sticky top-7 section-heading">Get the highlights.</h1>
+          <h1 id="title" className="section-heading">Get the highlights.</h1>
         <VideoCarousel />
       </div>
     </section>

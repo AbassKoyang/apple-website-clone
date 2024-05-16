@@ -39,46 +39,60 @@ const VideoCarousel = () => {
 
     useGSAP(() => {
         gsap.to('#video-control', {
-            translateY: 48,
+            borderWidth: '0px',
+            translateY: 0, 
+            scrollTrigger: {
+                trigger: '#slider-con',
+                start: 'top top',
+            }
+        })
+        gsap.to('#control-btn', {
             scale: 1,
             duration: 1,
             ease: 'none',
-            scrollTrigger:{
-                trigger: '#video-control',
-                start: 'top 80%'
+            scrollTrigger: {
+                trigger: '#slider-con',
+                start: "top top",
             }
         })
-        gsap.to('#video-control', {
+        gsap.to('#progress-con', {
+            scale: 1,
+            duration: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '#slider-con',
+                start: "top top",
+            }
+        })
+        gsap.to('#progress-con', {
+            translateX: 0,
+            delay: 0.5,
+            duration: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '#slider-con',
+                start: "top top",
+            }
+        })
+        gsap.to('#control-btn', {
+            translateX: 0,
+            delay: 0.5,
+            duration: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '#slider-con',
+                start: "top top",
+            }
+        })
+        gsap.to('#progress-con', {
             width: 'auto',
             height: 'auto',
-            borderRadius: '0',
-            borderColor: 'transparent',
-            borderWidth: '0',
-            backgroundColor: 'transparent',
-            display: 'flex',
-            justifyContent: 'center',
+            delay: 0.5,
             duration: 1,
-            delay: 1,
             ease: 'none',
-            scrollTrigger:{
-                trigger: '#video-control',
-                start: 'top 80%'
-            },
-            onComplete: () => {
-                gsap.to('#control-btn', {
-                    scale: 1,
-                    translateX: 0,
-                    delay: 0.1,
-                    duration: 1,
-                    ease: 'none',
-                })
-                gsap.to('#progress-con', {
-                    scale: 1,
-                    translateX: 0,
-                    delay: 0.1,
-                    duration: 1,
-                    ease: 'none',
-                })
+            scrollTrigger: {
+                trigger: '#slider-con',
+                start: "top top",
             }
         })
         
@@ -193,12 +207,12 @@ const handleLoadedMetadata = (i, e) => {
     }
     
   return (
-    <div className='w-full flex flex-col items-center mt-16'>
+    <div id='slider-con' className='w-full flex flex-col justify-between items-center mt-10'>
         <div className="w-full flex items-center">
             {hightlightsSlides.map((list, i) => (
                 <div key={list.id} id='slider' className='w-full sm:pr-20 pr-10'>
-                    <div className="video-carousel_container ">
-                        <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
+                    <div className="video-carousel_container">
+                        <div className="w-full h-full flex-center rounded-none md:rounded-3xl overflow-hidden bg-black">
                             <video id='video' playsInline={true} preload="auto"
                             muted
                             className={`${list.id === 2 && 'translate-x-44'} pointer-events-none`}
@@ -228,8 +242,8 @@ const handleLoadedMetadata = (i, e) => {
             ))}
         </div>
 
-        <div id='video-control' className="scale-0 size-20 bg-gray-300 backdrop-blur border-[14px] border-blue rounded-full mt-16 translate-y-[0px]">
-            <div id='progress-con' className="scale-0 py-5 px-7 bg-gray-300 backdrop-blur rounded-full translate-x-[-20px] flex-center">
+        <div id='video-control' className="flex-center mt-16 translate-y-[100px] border-0">
+            <div id='progress-con' className="scale-0 py-5 px-7 size-[52px] bg-gray-300 backdrop-blur rounded-full translate-x-[34px] flex-center">
                 {videoRef.current.map((_, i) => (
                     <span key={i} ref={(el) => (videoDivRef.current[i] = el)} className='mx-2 size-2 bg-gray-200 rounded-full relative cursor-pointer'>
                         <span className='absolute h-full w-full rounded-full' ref={(el) => (videoSpanRef.current[i] = el)} />
@@ -238,7 +252,7 @@ const handleLoadedMetadata = (i, e) => {
             </div>
             <button
             id='control-btn'
-            className='control-btn flex-center translate-x-[20px] scale-0' 
+            className='control-btn flex-center translate-x-[-36px] scale-0' 
             onClick={isLastVideo ? () => handleProcess('video-reset') 
             : !isPlaying? () => handleProcess('play') 
             : () => handleProcess('pause')}>
