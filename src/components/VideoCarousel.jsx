@@ -207,11 +207,11 @@ const handleLoadedMetadata = (i, e) => {
     }
     
   return (
-    <div id='slider-con' className='w-full flex flex-col justify-between items-center mt-10'>
+    <div id='slider-con' className='w-full flex flex-col justify-between items-center mt-16'>
         <div className="w-full flex items-center">
             {hightlightsSlides.map((list, i) => (
                 <div key={list.id} id='slider' className='w-full sm:pr-20 pr-10'>
-                    <div className="video-carousel_container">
+                    <div className="video-carousel_container md:pr-[100px]">
                         <div className="w-full h-full flex-center rounded-none md:rounded-3xl overflow-hidden bg-black">
                             <video id='video' playsInline={true} preload="auto"
                             muted
