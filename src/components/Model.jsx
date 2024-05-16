@@ -120,8 +120,8 @@ const Model = () => {
                 </div>
                 {/* <button id='test' className='sticky bottom-10 text-5xl text-red-500 translate-y-[100px] opacity-0'>TestButton</button> */}
                 <div id='control-buttons-con' className="mt-16 flex-center flex-col sticky bottom-10 translate-y-[100px]">
-                    <p id='desc' className='bg-[#0000004D] rounded-[5px] px-1.5 py-1 backdrop-blur max-w-xs text-center  text-pretty text-xs font-semibold text-white transition-all duration-300 ease-in-out opacity-0'>{iphoneDescription}</p>
-                    <div aria-label='Iphone color selector container' id='control-buttons-wrapper' className="scale-0 py-2.5 px-5 bg-gray-300 backdrop-blur rounded-full flex-center gap-3 mt-3.5 w-fit">
+                    <p id='desc' className='bg-[#0000004D] rounded-[5px] px-1.5 py-1 backdrop-blur max-w-xs md:max-w-md text-center  text-pretty text-xs font-semibold text-white transition-all duration-300 ease-in-out opacity-0'>{iphoneDescription}</p>
+                    <div aria-label='Iphone color selector container' id='control-buttons-wrapper' className="scale-0 py-2.5 px-5 bg-gray-300 backdrop-blur rounded-full flex-center gap-3 mt-2.5 md:mt-3.5 w-fit">
                         <button 
                         aria-label='Click to show 6.1” iPhone 15 Pro1 in four colors' 
                         aria-haspopup={true} 
