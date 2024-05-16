@@ -26,6 +26,7 @@ import chip from "/assets/images/chip.jpeg";
 import frame from "/assets/images/frame.png";
 import allColors from "/assets/images/all-colors.jpg"
 import titanium from "/assets/images/titanium.jpg"
+import blueTitanium from "/assets/images/blue-titanium.jpg"
 import whiteTitanium from "/assets/images/white-titanium.jpg"
 import blackTitanium from "/assets/images/black-titanium.jpg"
 
@@ -50,6 +51,7 @@ export const pauseImg = pause;
 export const allColorsImg = allColors;
 export const whiteTitaniumImg = whiteTitanium;
 export const blackTitaniumImg = blackTitanium;
+export const blueTitaniumImg = blueTitanium;
 export const titaniumImg = titanium;
 export const explore1Img = explore1;
 export const explore2Img = explore2;
