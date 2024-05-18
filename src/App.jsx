@@ -2,7 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Highlights from './components/Highlights';
 import Model from './components/Model';
-import TestComp from './components/TestComp';
+import FullStory from './components/FullStory';
 
 const App = () => {
 
@@ -12,7 +12,7 @@ const App = () => {
         <Hero/>
         <Highlights/>
         <Model />
-        <Hero />
+        <FullStory />
       </main>
   )
 }
