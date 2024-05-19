@@ -17,7 +17,7 @@ const Highlights = () => {
   return (
     <section id='highlights' className='w-screen overflow-x-hidden sm:py-[200px] py-[100px] sm:px-10 bg-zinc'>
       <div className="screen-max-width">
-          <h1 id="title" className="section-heading px-5 md:px-0">Get the highlights.</h1>
+          <h2 id="title" className="section-heading px-5 md:px-0">Get the highlights.</h2>
         <VideoCarousel />
       </div>
     </section>

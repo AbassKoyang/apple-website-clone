@@ -4,11 +4,11 @@ import React from 'react'
 
 const FullStory = () => {
     useGSAP(() => {
-        gsap.to('#heading', {
+        gsap.to('#full-story', {
             y: 0,
             opacity: 1,
             scrollTrigger: {
-                trigger: '#heading',
+                trigger: '#full-story',
                 toggleActions: "play reverse play reverse",
                 start: 'top bottom'
             }
@@ -18,7 +18,10 @@ const FullStory = () => {
   return (
     <section className="common-padding bg-zinc">
         <div className="screen-max-width">
-            <h1 id='heading' className='section-heading'>Explore the full story.</h1>
+            <h2 id='full-story' className='section-heading'>Explore the full story.</h2>
+            <div className="subsection pt-[200px] pb-[270px]" id="subsection">
+                <h1 className='text-[80px] text-white font-semibold line tracking-[-0.015em]'>iPhone. <br />Forged in titanium.</h1>
+            </div>
         </div>
     </section>
   )
