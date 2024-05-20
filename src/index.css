@@ -131,4 +131,7 @@ canvas {
   .model_color_buttons {
     @apply size-6 rounded-full
   }
+  .typography-site-body{
+    @apply text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray
+  }
 }
