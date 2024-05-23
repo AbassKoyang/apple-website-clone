@@ -1,6 +1,8 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
 import React from 'react'
+import { RiAddLine } from "react-icons/ri";
+
 import { explore1Img, explore2Img, exploreVideo } from '../utils';
 
 const FullStory = () => {
@@ -70,9 +72,10 @@ const FullStory = () => {
                             </p>
                         </div>
                     </div>
-                    <button className='sticky bottom-[100px] flex items-center gap-4'>
-                        <span>More on design & display</span>
-                        <span>
+                    <button className='mt-16 sticky bottom-[30px] flex items-center gap-[15px] py-2 px-2 bg-gray-300 backdrop-blur rounded-full group'>
+                        <span className="ml-4 text-[15px] leading-[1.381002381] font-semibold tracking-[-0.01em] max-w-[30em] text-white">More on design & display</span>
+                        <span className="flex-center bg-[#0071e3] rounded-[50%]">
+                            <RiAddLine className="p-[2px] text-[36px] text-white opacity-80 group-hover:opacity-100 transition-all duration-200 ease-in-out" />
                         </span>
                     </button>
                 </div>
