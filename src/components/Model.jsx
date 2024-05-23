@@ -3,7 +3,9 @@ import gsap from 'gsap'
 import React, { useEffect, useRef, useState } from 'react';
 
 import { allColorsImg, blackTitaniumImg, blueTitaniumImg, titaniumImg, whiteTitaniumImg } from '../utils';
+import { ScrollTrigger } from 'gsap/all';
 
+gsap.registerPlugin(ScrollTrigger);
 const Model = () => {
 
     const [iphoneColor, setIphoneColor] = useState('all-colors');
@@ -52,17 +54,6 @@ const Model = () => {
     }, []);
 
     useGSAP(() => {
-        gsap.to('#test', {
-            y: 0,
-            opacity: 1,
-            scrollTrigger: {
-                trigger: '#con',
-                start: 'top center'
-            }
-        })
-    }, []);
-
-    useGSAP(() => {
         gsap.to('#control-buttons-con', {
             y: 0,
             scrollTrigger: {
@@ -73,37 +64,29 @@ const Model = () => {
     }, []);
 
     useGSAP(() => {
-        gsap.to('#control-buttons-wrapper', {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#con',
+                start: 'top center',
+                end: "bottom 20%", // End animation when the bottom of the element hits 20% of the viewport height
+                toggleActions: "play none none reverse"
+            }
+        })
+        tl.to('#control-buttons-wrapper', {
             scale: 1,
             duration: 0.5,
-            scrollTrigger: {
-                trigger: '#con',
-                start: 'top center'
-            }
         })
-        gsap.to('#control-buttons-wrapper', {
+        .to('#control-buttons-wrapper', {
             border: '0px',
             duration: 0.5,
-            scrollTrigger: {
-                trigger: '#con',
-                start: 'top center'
-            }
         })
-        gsap.to('#control-buttons-wrapper', {
+        .to('#control-buttons-wrapper', {
             width: 'fit-content',
             duration: 0.5,
-            scrollTrigger: {
-                trigger: '#con',
-                start: 'top center'
-            }
         })
-        gsap.to('#desc', {
+        .to('#desc', {
             opacity: 1,
             delay: 1,
-            scrollTrigger: {
-                trigger: '#con',
-                start: 'top center'
-            }
         })
     }, []);
 

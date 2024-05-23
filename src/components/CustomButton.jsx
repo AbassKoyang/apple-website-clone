@@ -1,0 +1,53 @@
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import React from 'react'
+import { RiAddLine } from 'react-icons/ri'
+
+import { ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const CustomButton = () => {
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: "#full-story",
+              start: "top 20%", // Start animation when the top of the element hits 80% of the viewport height
+              end: "bottom 20%", // End animation when the bottom of the element hits 20% of the viewport height
+              toggleActions: "play none none reverse" // Play the animation on enter
+
+            }
+          });
+        tl.to('#custom-button', {
+            scale: 1,
+        })
+        .to('#custom-button', {
+            borderWidth: 0,
+            delay: 0.5,
+            duration: 0.5,
+        })
+        .to('#custom-button', {
+            width: 'auto',
+            duration: 0.3,
+            delay: 0.3,
+        })
+        .to('#button-span', {
+            scale: 1,
+        })
+        .to('#button-span', {
+            scale: 1,
+        })
+    }, [])
+
+  return (
+    <button id='custom-button' className='scale-0 size-[60px] border-[15px] border-blue mt-16 sticky bottom-[30px] flex items-center gap-[15px] py-2 px-2 bg-gray-300 backdrop-blur rounded-full group'>
+        <span id='button-span' className="scale-0 ml-4 text-[15px] leading-[1.381002381] font-semibold tracking-[-0.01em] max-w-[30em] text-white">More on design & display</span>
+        <span id='button-span' className="scale-0 flex-center bg-[#0071e3] rounded-[50%]">
+            <RiAddLine className="p-[2px] text-[36px] text-white opacity-80 group-hover:opacity-100 transition-all duration-200 ease-in-out" />
+        </span>
+    </button>
+  )
+}
+
+export default CustomButton
