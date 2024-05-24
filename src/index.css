@@ -67,11 +67,11 @@ canvas {
   }
 
   .common-padding {
-    @apply sm:py-[200px] py-[100px] sm:px-10 px-0
+    @apply sm:py-[200px] py-[100px] sm:px-10 px-5
   }
 
   .section-heading {
-    @apply text-gray lg:text-[56px] lg:leading-[1.0714285714] md:text-5xl text-4xl lg:mb-0 mb-5 font-semibold tracking-tighter opacity-0 translate-y-20
+    @apply text-gray lg:text-[56px] lg:leading-[1.0714285714] md:text-5xl text-4xl lg:mb-0 mb-0 font-semibold tracking-tighter opacity-0 translate-y-20
   }
 
   .feature-text {
@@ -137,6 +137,6 @@ canvas {
     @apply size-6 rounded-full
   }
   .typography-site-body{
-    @apply text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray
+    @apply m-0 p-0 text-[17px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray
   }
 }

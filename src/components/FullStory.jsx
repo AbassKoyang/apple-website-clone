@@ -43,19 +43,19 @@ const FullStory = () => {
         <div className="screen-max-width">
             <h2 id='full-story' className='section-heading'>Explore the full story.</h2>
             <div className="subsection pt-[100px] pb-[206px] md:pt-[200px] md:pb-[270px]" id="subsection">
-                <h4 className='margin-inline text-[40px] md:text-[80px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1] tracking-[0em] md:tracking-[-0.015em]'>iPhone. <br />Forged in titanium.</h4>
-                <div className="mt-24 w-full flex flex-col items-center relative">
-                    <div className="w-full grid grid-rows-3 md:grid-rows-[517px] gap-5 mx-[105px] mb-[60px] max-w-[1050px]">
-                        <div className="row-span-1 flex justify-center items-end md:h-[517px] object-contain bg-black">
+                <h4 className='ml-20 md:ml-24 max-w-[200px] md:max-w-max text-[40px] md:text-[80px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1] tracking-[0em] md:tracking-[-0.015em] mt-0'>iPhone. <br />Forged in titanium.</h4>
+                <div className="mt-[45px] md:mt-24 w-full flex flex-col items-center relative">
+                    <div className="w-full grid grid-rows-3 md:grid-rows-[517px] gap-5 mx-[105px] mb-[60px] max-w-[460px] md:max-w-[766px] lg:max-w-[1050px]">
+                        <div className="row-span-1 flex justify-center items-end h-[400px] md:h-[517px] object-contain bg-black">
                             <video className='pointer-events-none' preload='auto' autoPlay playsInline muted key={exploreVideo}>
                                 <source src={exploreVideo} type='video/mp4'/>
                             </video>
                         </div>
                         <div id='scaled-images-con' className="row-span-2 md:row-span-1 grid grid-cols-2 gap-5">
-                            <div className="col-span-2 md:col-span-1 object-contain bg-black flex-center overflow-hidden pl-8">
+                            <div className="h-[400px] col-span-2 md:col-span-1 object-contain bg-black flex-center overflow-hidden pl-8">
                                 <img id='scaled-image' className='opacity-30 scale-125' src={explore1Img} alt="A picture of the iphone 15 camera" />
                             </div>
-                            <div className="col-span-2 md:col-span-1 object-contain bg-black flex-center overflow-hidden">
+                            <div className="h-[400px] col-span-2 md:col-span-1 object-contain bg-black flex-center overflow-hidden">
                                 <img id='scaled-image' className='opacity-30 scale-125' src={explore2Img} alt="A picture of the iphone 15 camera" />
                             </div>
                         </div>
@@ -63,13 +63,13 @@ const FullStory = () => {
 
                     <div id='full-story-text-con' className="w-full flex justify-around flex-wrap max-w-[1050px]">
                         <div className=" max-w-[100%] md:max-w-[41.6%] lg:max-w-[33.3%]">
-                            <p id='full-story-text' className='typography-site-body opacity-0 translate-y-20'>
+                            <p id='full-story-text' className='typography-site-body opacity-0 translate-y-20 max-w-[280px] md:max-w-max margin-inline'>
                             iPhone 15 Pro is <strong className='text-[#f5f5f7] font-semibold'>the first iPhone to feature an aerospace‑grade titanium design</strong>, using the same alloy that spacecraft use for missions to Mars.
                             </p>
                         </div>
-                        <div className=" max-w-[100%] md:max-w-[41.6%] lg:max-w-[33.3%]">
-                            <p id='full-story-text' className='typography-site-body opacity-0 translate-y-20'>
-                            Titanium has one of the best strength‑to‑weight ratios of any metal, making these our <strong  className='text-[#f5f5f7] font-semibold'>lightest Pro models ever</strong>. You’ll notice the difference the moment you pick one up
+                        <div className=" max-w-[100%] md:max-w-[41.6%] lg:max-w-[33.3%] mt-[0.8em] md:mt-0">
+                            <p id='full-story-text' className='typography-site-body opacity-0 translate-y-20 max-w-[280px] md:max-w-max margin-inline'>
+                            Titanium has one of the best strength‑to‑weight ratios of any metal, making these our <strong  className='text-[#f5f5f7] font-semibold'>lightest Pro models ever</strong>. You’ll notice the difference the moment you pick one up.
                             </p>
                         </div>
                     </div>
