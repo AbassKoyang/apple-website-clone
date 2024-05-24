@@ -42,20 +42,20 @@ const FullStory = () => {
     <section className="common-padding bg-zinc">
         <div className="screen-max-width">
             <h2 id='full-story' className='section-heading'>Explore the full story.</h2>
-            <div className="subsection pt-[200px] pb-[270px]" id="subsection">
-                <h4 className='ml-40 text-[80px] text-[#F5F5F7] font-semibold leading-[1] tracking-[-0.015em]'>iPhone. <br />Forged in titanium.</h4>
+            <div className="subsection pt-[100px] pb-[206px] md:pt-[200px] md:pb-[270px]" id="subsection">
+                <h4 className='margin-inline text-[40px] md:text-[80px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1] tracking-[0em] md:tracking-[-0.015em]'>iPhone. <br />Forged in titanium.</h4>
                 <div className="mt-24 w-full flex flex-col items-center relative">
-                    <div className="w-full grid grid-rows-[517px] gap-5 mx-[105px] mb-[60px] max-w-[1050px]">
-                        <div className="row-span-1 flex justify-center items-end h-[517px] object-contain bg-black">
+                    <div className="w-full grid grid-rows-3 md:grid-rows-[517px] gap-5 mx-[105px] mb-[60px] max-w-[1050px]">
+                        <div className="row-span-1 flex justify-center items-end md:h-[517px] object-contain bg-black">
                             <video className='pointer-events-none' preload='auto' autoPlay playsInline muted key={exploreVideo}>
                                 <source src={exploreVideo} type='video/mp4'/>
                             </video>
                         </div>
-                        <div id='scaled-images-con' className="row-span-1 grid grid-cols-2 gap-5">
-                            <div className="col-span-1 object-contain bg-black flex-center overflow-hidden pl-8">
+                        <div id='scaled-images-con' className="row-span-2 md:row-span-1 grid grid-cols-2 gap-5">
+                            <div className="col-span-2 md:col-span-1 object-contain bg-black flex-center overflow-hidden pl-8">
                                 <img id='scaled-image' className='opacity-30 scale-125' src={explore1Img} alt="A picture of the iphone 15 camera" />
                             </div>
-                            <div className="col-span-1 object-contain bg-black flex-center overflow-hidden">
+                            <div className="col-span-2 md:col-span-1 object-contain bg-black flex-center overflow-hidden">
                                 <img id='scaled-image' className='opacity-30 scale-125' src={explore2Img} alt="A picture of the iphone 15 camera" />
                             </div>
                         </div>
@@ -73,7 +73,7 @@ const FullStory = () => {
                             </p>
                         </div>
                     </div>
-                    <CustomButton />
+                    <CustomButton target="#full-story" />
                 </div>
             </div>
         </div>

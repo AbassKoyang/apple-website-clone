@@ -35,6 +35,11 @@ canvas {
   position: relative;
   max-width: 1400px;
 }
+.margin-inline{
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-width: 280px;
+}
 
 @layer utilities {
   .flex-center {
@@ -62,7 +67,7 @@ canvas {
   }
 
   .common-padding {
-    @apply sm:py-[200px] py-[100px] sm:px-10 px-5
+    @apply sm:py-[200px] py-[100px] sm:px-10 px-0
   }
 
   .section-heading {
