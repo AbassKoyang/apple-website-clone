@@ -1,12 +1,14 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
-import React from 'react'
+import React, { useState } from 'react'
 import { RiAddLine } from "react-icons/ri";
 
 import { explore1Img, explore2Img, exploreVideo } from '../utils';
 import CustomButton from './CustomButton';
+import FullStoryModal from './FullStoryModal';
 
 const FullStory = () => {
+    const [isModalVisible, setModalVisible] = useState(false);
     useGSAP(() => {
         gsap.to('#full-story', {
             y: 0,
@@ -73,10 +75,11 @@ const FullStory = () => {
                             </p>
                         </div>
                     </div>
-                    <CustomButton target="#full-story" />
+                    <CustomButton target="#full-story" handleClick={() => setModalVisible(true)} />
                 </div>
             </div>
         </div>
+        <FullStoryModal visible={isModalVisible} handleClick={() => setModalVisible(false)} />
     </section>
   )
 }
