@@ -20,7 +20,7 @@ const CustomButton = ({handleClick, target}) => {
             }
           });
         tl.to('#custom-button', {
-            scale: 1,
+            scale: 0.9,
         })
         .to('#custom-button', {
             borderWidth: 0,
@@ -29,6 +29,7 @@ const CustomButton = ({handleClick, target}) => {
         })
         .to('#custom-button', {
             width: 'auto',
+            height: '56px',
             duration: 0.3,
             delay: 0.3,
         })
@@ -42,8 +43,8 @@ const CustomButton = ({handleClick, target}) => {
 
   return (
     <button onClick={handleClick} id='custom-button' className='scale-0 size-[70px] border-[12px] border-blue mt-[35px] md:mt-16 sticky bottom-[30px] flex items-center bg-gray-300 backdrop-blur rounded-full group'>
-        <span id='button-span' className="scale-0 ml-[32px] mr-[24px] pt-[14px] pb-[14px] text-[14px] md:text-[17px] leading-[1.381002381] font-semibold tracking-[-0.01em] max-w-[30em] text-white">More on design & display</span>
-        <span id='button-span' className="scale-0 flex-center bg-[#0071e3] rounded-[50%] mr-[14px]">
+        <span id='button-span' className="scale-0 ml-[32px] mr-[24px] text-[14px] md:text-[16px] leading-[1.381002381] font-semibold tracking-normal max-w-[30em] text-white">More on design & display</span>
+        <span id='button-span' className="scale-0 flex-center bg-[#0071e3] rounded-[50%] mr-[10px]">
             <RiAddLine className="p-[2px] text-[36px] text-white opacity-80 group-hover:opacity-100 transition-all duration-200 ease-in-out" />
         </span>
     </button>

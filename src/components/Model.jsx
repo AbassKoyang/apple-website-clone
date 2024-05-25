@@ -74,15 +74,16 @@ const Model = () => {
         })
 
         tl.to('#control-buttons-wrapper', {
-            scale: 1,
+            scale: 0.9,
         })
         .to('#control-buttons-wrapper', {
             borderWidth: 0,
-            delay: 0.5,
-            duration: 0.5,
+            delay: 0.3,
+            duration: 0.3,
         })
         .to('#control-buttons-wrapper', {
             width: 'fit-content',
+            height: '56px',
             duration: 0.3,
             delay: 0.3,
         })
@@ -121,7 +122,7 @@ const Model = () => {
                         aria-expanded={iphoneColor === 'all-colors'} 
                         aria-selected={iphoneColor === 'all-colors'} 
                         onClick={() => setIphoneColor('all-colors')} 
-                        className={`${iphoneColor === 'all-colors' ? 'p-1 bg-white border-2 border-blue' : 'p-0 '} transition-all duration-300 ease-in-out rounded-full scale-0`}>
+                        className={`${iphoneColor === 'all-colors' ? 'p-0.5 bg-white focus:border-2 border-blue' : 'p-0 '} transition-all duration-300 ease-in-out rounded-full scale-0`}>
                             <div className={`model_color_buttons bg-gradient-to-r from-[#8F8A81] via-[#202630] to-[#242526] ${iphoneColor === 'all-colors' ? 'border-2 border-gray-300' : ''} transition-all duration-300 ease-in-out`}></div>
                         </button>
 
@@ -133,7 +134,7 @@ const Model = () => {
                         aria-expanded={iphoneColor === 'natural-titanium'} 
                         aria-selected={iphoneColor === 'natural-titanium'} 
                         onClick={() => setIphoneColor('natural-titanium')} 
-                        className={`${iphoneColor === 'natural-titanium' ? 'p-1 bg-white border-2 border-blue' : 'p-0 '} transition-all duration-300 ease-in-out rounded-full scale-0`}>
+                        className={`${iphoneColor === 'natural-titanium' ? 'p-0.5 bg-white focus:border-2 border-blue' : 'p-0 '} transition-all duration-300 ease-in-out rounded-full scale-0`}>
                         <div 
                         className={`model_color_buttons bg-[#8F8A81] ${iphoneColor === 'natural-titanium' ? 'border-2 border-gray-300' : ''} transition-all duration-300 ease-in-out`}></div>
                         </button>
@@ -146,7 +147,7 @@ const Model = () => {
                         aria-expanded={iphoneColor === 'blue-titanium'} 
                         aria-selected={iphoneColor === 'blue-titanium'} 
                         onClick={() => setIphoneColor('blue-titanium')} 
-                        className={`${iphoneColor === 'blue-titanium' ? 'p-1 bg-white border-2 border-blue' : 'p-0 '} transition-all duration-300 ease-in-out rounded-full scale-0`}>
+                        className={`${iphoneColor === 'blue-titanium' ? 'p-0.5 bg-white focus:border-2 border-blue' : 'p-0 '} transition-all duration-300 ease-in-out rounded-full scale-0`}>
                         <div className={`model_color_buttons bg-[#202630] ${iphoneColor === 'blue-titanium' ? 'border-2 border-gray-300' : ''} transition-all duration-300 ease-in-out`}></div>
                         </button>
 
@@ -158,7 +159,7 @@ const Model = () => {
                         aria-expanded={iphoneColor === 'white-titanium'} 
                         aria-selected={iphoneColor === 'white-titanium'}
                         onClick={() => setIphoneColor('white-titanium')} 
-                        className={`${iphoneColor === 'white-titanium' ? 'p-1 bg-white border-2 border-blue' : 'p-0 '} transition-all duration-300 ease-in-out rounded-full scale-0`}>
+                        className={`${iphoneColor === 'white-titanium' ? 'p-0.5 bg-white focus:border-2 border-blue' : 'p-0 '} transition-all duration-300 ease-in-out rounded-full scale-0`}>
                         <div className={`model_color_buttons bg-[#C9C8C3] ${iphoneColor === 'white-titanium' ? 'border-2 border-gray-300' : ''} transition-all duration-300 ease-in-out`}></div>
                         </button>
 
@@ -170,7 +171,7 @@ const Model = () => {
                         aria-expanded={iphoneColor === 'black-titanium'} 
                         aria-selected={iphoneColor === 'black-titanium'} 
                         onClick={() => setIphoneColor('black-titanium')} 
-                        className={`${iphoneColor === 'black-titanium' ? 'p-1 bg-white border-2 border-blue' : 'p-0 '} transition-all duration-300 ease-in-out rounded-full scale-0`}>
+                        className={`${iphoneColor === 'black-titanium' ? 'p-0.5 bg-white focus:border-2 border-blue' : 'p-0 '} transition-all duration-300 ease-in-out rounded-full scale-0`}>
                         <div className={`model_color_buttons bg-[#242526] ${iphoneColor === 'black-titanium' ? 'border-2 border-gray-300' : ''} transition-all duration-300 ease-in-out`}></div>
                         </button>
                     </div>
