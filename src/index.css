@@ -140,6 +140,6 @@ canvas {
     @apply m-0 p-0 text-[17px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray
   }
   .typography-site-body-fullstory-modal{
-    @apply text-[17px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray
+    @apply text-[16px] md:text-[18px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray md:max-w-[325px]
   }
 }
