@@ -2,7 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
 import { RiCloseFill } from 'react-icons/ri'
-import { fullStoryModalImage1img, fullStoryModalImage2img, fullStoryModalVideo } from '../utils'
+import { fullStoryModalCouplingVideo, fullStoryModalImage1img, fullStoryModalImage2img, fullStoryModalVideo } from '../utils'
 import { ScrollTrigger } from 'gsap/all';
 import { MdOutlinePauseCircleOutline, MdOutlineReplay } from 'react-icons/md'
 
@@ -45,18 +45,22 @@ const FullStoryModal = ({visible, handleClick}) => {
         scroller: '#fullstory-modal'
       }
     })
-    tl.to('#fullstory-modal-scaled-image', {
-      scale: 1,
+    tl.to('#fullstory-modal-scaled-image-con', {
       opacity: 1,
+      duration: 0.5,
+    })
+    .to('#fullstory-modal-scaled-image', {
+      scale: 1,
       duration: 0.5,
   })
   gsap.to('#fullstory-modal-text1', {
     y: 0,
     opacity: 1,
     scrollTrigger: {
-        trigger: '#full-story-text-con',
+        trigger: '#fullstory-modal-text1',
         toggleActions: "play reverse play reverse",
         start: 'top 60%',
+        end: 'top 0%',
         scroller: '#fullstory-modal',
     }
 })
@@ -81,16 +85,16 @@ const FullStoryModal = ({visible, handleClick}) => {
 
             <div className="w-full flex-center bg-zinc pt-[120px]">
               <div id="fullstory-modal-scaled-images-con" className="w-[87.5%] md:w-full max-w-[312px] md:max-w-[720px] lg:max-w-[980px] grid grid-row-2 md:grid-cols-2 md:gap-[50px]">
-                <div id='full-story-text-con' className="row-span-1 md:col-span-1">
-                  <div className="w-full h-[460px] object-contain bg-black flex-center pt-20 overflow-hidden">
-                      <img id='fullstory-modal-scaled-image' className='opacity-30 scale-125' src={fullStoryModalImage1img} alt="A picture of the iphone 15 camera" />
+                <div className="row-span-1 md:col-span-1">
+                  <div id='fullstory-modal-scaled-image-con' className="opacity-30 w-full h-[460px] object-contain bg-black flex-center pt-20 overflow-hidden">
+                      <img id='fullstory-modal-scaled-image' className='scale-125' src={fullStoryModalImage1img} alt="A picture of the iphone 15 camera" />
 
                   </div>
                   <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal translate-y-20 opacity-0 pb-[50px] md:pb-0 mt-[55px] lg:ml-20'>The <strong className='text-[#f5f5f7] font-semibold'>beautiful, fine‑brushed finish</strong> on the titanium bands is achieved through precision machining, sanding, brushing, and blasting.</p>
                 </div>
-                <div id='full-story-text-con' className="row-span-1 md:col-span-1">
-                  <div className="w-full h-[460px] object-contain bg-black flex items-end justify-end pt-20 overflow-hidden">
-                      <img id='fullstory-modal-scaled-image' className='opacity-30 scale-125' src={fullStoryModalImage2img} alt="A picture of the iphone 15 camera" />
+                <div className="row-span-1 md:col-span-1">
+                  <div id='fullstory-modal-scaled-image-con' className="opacity-30 w-full h-[460px] object-contain bg-black flex items-end justify-end pt-20 overflow-hidden">
+                      <img id='fullstory-modal-scaled-image' className='scale-125' src={fullStoryModalImage2img} alt="A picture of the iphone 15 camera" />
 
                   </div>
                   <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal translate-y-20 opacity-0 pb-[50px] md:pb-0 mt-[55px] lg:ml-20'>New contoured edges and the thinnest borders ever on iPhone make it even <strong className='text-[#f5f5f7] font-semibold'>more comfortable to hold</strong> in your hand.</p>
@@ -98,16 +102,25 @@ const FullStoryModal = ({visible, handleClick}) => {
               </div>
             </div>
 
-            <div className="w-full bg-zinc pt-[60px] pb-[120px] flex-center">
+            <div className="w-full bg-zinc pt-[60px] pb-[120px] px-5 md:px-0 flex-center flex-col">
               <div className="w-full bg-black max-w-[980px]">
-                <video ref={couplingVideoRef} className='pointer-events-none' preload='auto' autoPlay playsInline muted key={fullStoryModalVideo}>
-                    <source src={fullStoryModalVideo} type='video/mp4'/>
+                <video ref={couplingVideoRef} className='pointer-events-none' preload='auto' autoPlay playsInline muted key={fullStoryModalCouplingVideo}>
+                    <source src={fullStoryModalCouplingVideo} type='video/mp4'/>
                 </video>
               </div>
-              <button onClick={togglePlayback} className='text-zinc py-4 px-0 bg-transparent outline-0 border-0 flex-center gap-2'>
-                <p>{isPlaying? 'Pause' : 'Replay'}</p>
+              <button onClick={togglePlayback} className='text-gray py-8 px-0 bg-transparent outline-0 border-0 flex-center gap-2'>
+                <p>{isPlaying ? 'Pause' : 'Replay'}</p>
                 {isPlaying ? (<MdOutlinePauseCircleOutline />) : (<MdOutlineReplay />)}
               </button>
+
+              <div className="w-full flex flex-col md:flex-row flex-wrap items-center md:items-start md:justify-around max-w-[980px] mt-[60px]">
+                <div className="">
+                  <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal pb-[30px] md:pb-0 lg:ml-20'>The titanium band is bonded with a new internal aluminum frame through solid‑state diffusion. This is an industry‑first innovation, using a thermomechanical process that <strong className='text-[#f5f5f7] font-semibold'>joins these two metals with incredible strength.</strong></p>
+                </div>
+                <div className="">
+                  <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal lg:ml-20'>The internal frame is also made from <strong className='text-[#f5f5f7] font-semibold'>100% recycled aluminum</strong>, which contributes to our overall usage of recycled materials and helps us work toward our 2030 climate goals.</p>
+                </div>
+              </div>
             </div>
         </div>
     </section>
