@@ -2,7 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
 import { RiCloseFill } from 'react-icons/ri'
-import { fullStoryModalCouplingVideo, fullStoryModalImage1img, fullStoryModalImage2img, fullStoryModalVideo } from '../utils'
+import { fullStoryModalCouplingVideo, fullStoryModalImage1img, fullStoryModalImage2img, fullStoryModalVideo, raindropImg, trifectaImg } from '../utils'
 import { ScrollTrigger } from 'gsap/all';
 import { MdOutlinePauseCircleOutline, MdOutlineReplay } from 'react-icons/md'
 
@@ -121,6 +121,21 @@ const FullStoryModal = ({visible, handleClick}) => {
                   <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal lg:ml-20'>The internal frame is also made from <strong className='text-[#f5f5f7] font-semibold'>100% recycled aluminum</strong>, which contributes to our overall usage of recycled materials and helps us work toward our 2030 climate goals.</p>
                 </div>
               </div>
+            </div>
+
+            <div className="w-full flex-center">
+              <div className="pt-[120px] bg-black w-full flex flex-col md:flex-row flex-wrap items-center md:items-start md:justify-around max-w-[980px] px-5">
+              <div className="lg:ml-20">
+                <img className="mb-5" src={trifectaImg} alt="Trifecta icon" />
+                <h3 className='typography-headline-secondary'>Trifecta of tough.</h3>
+                <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal mt-5'>A strong titanium band. The toughest back glass in a smartphone. And a Ceramic Shield front that’s even <strong className='text-[#f5f5f7] font-semibold'>tougher than any smartphone glass.</strong></p>
+              </div>
+              <div className="lg:ml-20">
+                <img className="mb-5" src={raindropImg} alt="Trifecta icon" />
+                <h3 className='typography-headline-secondary'>Remarkably resistant.</h3>
+                <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal mt-5'>iPhone is <strong className='text-[#f5f5f7] font-semibold'>splash, water, and dust resistant.</strong> What a relief.</p>
+              </div>
+            </div>
             </div>
         </div>
     </section>

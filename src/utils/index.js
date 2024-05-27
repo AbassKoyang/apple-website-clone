@@ -33,6 +33,8 @@ import whiteTitanium from "/assets/images/white-titanium.jpg"
 import blackTitanium from "/assets/images/black-titanium.jpg"
 import fullStoryModalImage1 from "/assets/images/fullstory-modal-grid-image1.jpg"
 import fullStoryModalImage2 from "/assets/images/fullstory-modal-grid-image2.jpg"
+import raindropImage from "/assets/images/raindrop-image.png"
+import trifectaImage from "/assets/images/trifecta-image.png"
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
@@ -63,5 +65,7 @@ export const explore1Img = explore1;
 export const explore2Img = explore2;
 export const fullStoryModalImage1img = fullStoryModalImage1;
 export const fullStoryModalImage2img = fullStoryModalImage2;
+export const trifectaImg = trifectaImage;
+export const raindropImg = raindropImage;
 export const chipImg = chip;
 export const frameImg = frame;
