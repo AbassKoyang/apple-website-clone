@@ -38,6 +38,7 @@ import trifectaImage from "/assets/images/trifecta-image.png"
 import trueIntelligenceImage from "/assets/images/fullstory-modal-intelligence-image.jpg"
 import homescreenImage from "/assets/images/fullstory-modal-iphone-homescreen-image.jpg"
 import wallpaperImage from "/assets/images/fullstory-modal-iphone-wallpaper-image.jpg"
+import standByImage from "/assets/images/full.jpg"
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
@@ -73,5 +74,6 @@ export const raindropImg = raindropImage;
 export const trueIntelligenceImg = trueIntelligenceImage;
 export const homeScreenImg = homescreenImage;
 export const wallPaperImg = wallpaperImage;
+export const standByImg = standByImage;
 export const chipImg = chip;
 export const frameImg = frame;

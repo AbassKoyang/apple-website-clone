@@ -2,7 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
 import { RiCloseFill } from 'react-icons/ri'
-import { fullStoryModalCouplingVideo, fullStoryModalImage1img, fullStoryModalImage2img, fullStoryModalVideo, homeScreenImg, raindropImg, trifectaImg, trueIntelligenceImg, wallPaperImg } from '../utils'
+import { fullStoryModalCouplingVideo, fullStoryModalImage1img, fullStoryModalImage2img, fullStoryModalVideo, homeScreenImg, raindropImg, standByImg, trifectaImg, trueIntelligenceImg, wallPaperImg } from '../utils'
 import { ScrollTrigger } from 'gsap/all';
 import { MdOutlinePauseCircleOutline, MdOutlineReplay } from 'react-icons/md'
 
@@ -225,12 +225,12 @@ const FullStoryModal = ({visible, handleClick}) => {
 
                 <div className="w-full grid grid-row-2 md:grid-cols-2 md:gap-[50px]">
                   <div className="row-span-1 md:col-span-1 flex flex-col items-start justify-between">
-                    <p id='fullstory-modal-text8' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray mt-5 lg:ml-20 max-w-[325px]'><strong className='text-[#f5f5f7] font-semibold'>Dynamic Island</strong> bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can easily track your next ride, sports scores, flight status, and more.</p>
+                    <p id='fullstory-modal-text8' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray lg:ml-20 max-w-[325px]'><strong className='text-[#f5f5f7] font-semibold'>Dynamic Island</strong> bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can easily track your next ride, sports scores, flight status, and more.</p>
                     <img className='mt-[60px] lg:ml-12' src={homeScreenImg} alt="Iphone 15 homescreen image" />
                   </div>
 
                   <div className="row-span-1 md:col-span flex flex-col items-start justify-between">
-                    <p id='fullstory-modal-text9' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray mt-5 lg:ml-20 max-w-[325px]'>With the<strong className='text-[#f5f5f7] font-semibold'>Always-On display</strong>, your Lock Screen stays glanceable, so you don’t have to tap it to stay in the know. Using smart algorithms, iPhone detects when it’s in your pocket or face down and goes dark to save battery life.</p>
+                    <p id='fullstory-modal-text9' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray lg:ml-20 max-w-[325px]'>With the<strong className='text-[#f5f5f7] font-semibold'>Always-On display</strong>, your Lock Screen stays glanceable, so you don’t have to tap it to stay in the know. Using smart algorithms, iPhone detects when it’s in your pocket or face down and goes dark to save battery life.</p>
                     <img className='mt-[60px] lg:ml-12' src={wallPaperImg} alt="Iphone 15 wallpaper image" />
                   </div>
                 </div>
@@ -241,6 +241,10 @@ const FullStoryModal = ({visible, handleClick}) => {
             <div className="w-full flex-center bg-black px-12 md:px-0 py-[120px]">
               <div className="w-full max-w-[980px]">
                 <h2 className='typography-headline-secondary lg:ml-20 mb-[30px]'>StandBy for<br /> something special.</h2>
+                <div className="w-full pt-20 flex flex-col items-center justify-center">
+                  <img className='pb-[60px] w-[504px]' src={standByImg} alt="Stand by clock" />
+                  <p id='fullstory-modal-text10' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[652px]'>StandBy <strong className='text-[#f5f5f7] font-semibold'>turns your iPhone into a new, full-screen experience</strong> with glanceable information you can see from a distance. Just set it on its side while charging to display the time, showcase your favorite photos, or keep an eye on your widgets. Thanks to the Always‑On display, it’s persistent. But at night, the screen dims so you can sleep easy.</p>
+                </div>
               </div>
             </div>
         </div>
