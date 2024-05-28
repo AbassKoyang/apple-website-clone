@@ -37,38 +37,61 @@ const FullStoryModal = ({visible, handleClick}) => {
 
 
   useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#fullstory-modal-scaled-images-con',
-        toggleActions: "play reverse play reverse",
-        start: 'top center',
-        scroller: '#fullstory-modal'
-      }
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#fullstory-modal-scaled-images-con',
+          toggleActions: "play reverse play reverse",
+          start: 'top center',
+          scroller: '#fullstory-modal'
+        }
+      })
+      tl.to('#fullstory-modal-scaled-image-con', {
+        opacity: 1,
+        duration: 0.5,
+      })
+      .to('#fullstory-modal-scaled-image', {
+        scale: 1,
+        duration: 0.5,
     })
-    tl.to('#fullstory-modal-scaled-image-con', {
+    gsap.to('#fullstory-modal-text1', {
+      y: 0,
       opacity: 1,
-      duration: 0.5,
-    })
-    .to('#fullstory-modal-scaled-image', {
-      scale: 1,
-      duration: 0.5,
+      scrollTrigger: {
+          trigger: '#fullstory-modal-text1',
+          toggleActions: "play reverse play reverse",
+          start: 'top 70%',
+          end: 'top 0%',
+          scroller: '#fullstory-modal',
+      }
   })
-  gsap.to('#fullstory-modal-text1', {
+
+  gsap.to('#fullstory-modal-text2', {
     y: 0,
     opacity: 1,
     scrollTrigger: {
-        trigger: '#fullstory-modal-text1',
+        trigger: '#fullstory-modal-text2',
         toggleActions: "play reverse play reverse",
-        start: 'top 60%',
+        start: 'top 70%',
         end: 'top 0%',
         scroller: '#fullstory-modal',
-    }
-})
+    }})
+
+  gsap.to('#fullstory-modal-text3', {
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+        trigger: '#fullstory-modal-text3',
+        toggleActions: "play reverse play reverse",
+        start: 'top 70%',
+        end: 'top 0%',
+        scroller: '#fullstory-modal',
+    }})
+
   }, [])
   return (
-    <section id='fullstory-modal' className={` ${visible ? 'block top-0' : 'top-[100%]'} fixed right-0 w-screen h-screen bg-gray-300 backdrop-blur transition-all duration-500 ease-in-out pl-[26px] pr-5 py-10 overflow-y-scroll`}>
+    <section id='fullstory-modal' className={` ${visible ? 'block top-0' : 'top-[100%]'} fixed right-0 w-screen h-screen flex justify-center bg-gray-300 backdrop-blur transition-all duration-500 ease-in-out pl-14 pr-11 md:pl-[25px] md:pr-3 py-10 overflow-y-scroll`}>
 
-        <div className="w-full h-fit bg-black rounded-3xl relative">
+        <div className="w-full max-w-[375px] md:max-w-fit h-fit bg-black rounded-3xl relative">
             <div className="p-0 m-0 flex justify-end sticky top-0">
                 <button onClick={ handleClick} aria-label='close modal' className='mt-[15px] mr-[15px] p-1 bg-[#333336] flex-center rounded-full transition-all duration-300 ease-in-out group'>
                     <RiCloseFill  className="text-[#f5f5f7] group-hover:text-white text-[25px]" />
@@ -83,18 +106,18 @@ const FullStoryModal = ({visible, handleClick}) => {
               </div>
             </div>
 
-            <div className="w-full flex-center bg-zinc pt-[120px]">
-              <div id="fullstory-modal-scaled-images-con" className="w-[87.5%] md:w-full max-w-[312px] md:max-w-[720px] lg:max-w-[980px] grid grid-row-2 md:grid-cols-2 md:gap-[50px]">
+            <div className="w-full flex-center bg-zinc pt-[120px] px-12 md:px-0">
+              <div id="fullstory-modal-scaled-images-con" className="w-full md:max-w-[720px] lg:max-w-[980px] grid grid-row-2 md:grid-cols-2 md:gap-[50px]">
                 <div className="row-span-1 md:col-span-1">
-                  <div id='fullstory-modal-scaled-image-con' className="opacity-30 w-full h-[460px] object-contain bg-black flex-center pt-20 overflow-hidden">
-                      <img id='fullstory-modal-scaled-image' className='scale-125' src={fullStoryModalImage1img} alt="A picture of the iphone 15 camera" />
+                  <div id='fullstory-modal-scaled-image-con' className="opacity-30 w-full h-[280px] md:h-[460px] object-contain bg-black flex-center pt-20 overflow-hidden">
+                      <img id='fullstory-modal-scaled-image' className='scale-125 w-[106px] md:w-auto' src={fullStoryModalImage1img} alt="A picture of the iphone 15 camera" />
 
                   </div>
                   <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal translate-y-20 opacity-0 pb-[50px] md:pb-0 mt-[55px] lg:ml-20'>The <strong className='text-[#f5f5f7] font-semibold'>beautiful, fine‑brushed finish</strong> on the titanium bands is achieved through precision machining, sanding, brushing, and blasting.</p>
                 </div>
                 <div className="row-span-1 md:col-span-1">
-                  <div id='fullstory-modal-scaled-image-con' className="opacity-30 w-full h-[460px] object-contain bg-black flex items-end justify-end pt-20 overflow-hidden">
-                      <img id='fullstory-modal-scaled-image' className='scale-125' src={fullStoryModalImage2img} alt="A picture of the iphone 15 camera" />
+                  <div id='fullstory-modal-scaled-image-con' className="opacity-30 w-full h-[280px] md:h-[460px] object-contain bg-black flex items-end justify-end pt-20 overflow-hidden">
+                      <img id='fullstory-modal-scaled-image' className='scale-125 w-[200px] md:w-auto' src={fullStoryModalImage2img} alt="A picture of the iphone 15 camera" />
 
                   </div>
                   <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal translate-y-20 opacity-0 pb-[50px] md:pb-0 mt-[55px] lg:ml-20'>New contoured edges and the thinnest borders ever on iPhone make it even <strong className='text-[#f5f5f7] font-semibold'>more comfortable to hold</strong> in your hand.</p>
@@ -102,7 +125,7 @@ const FullStoryModal = ({visible, handleClick}) => {
               </div>
             </div>
 
-            <div className="w-full bg-zinc pt-[60px] pb-[120px] px-5 md:px-0 flex-center flex-col">
+            <div className="w-full bg-zinc pt-[60px] pb-[120px] px-12 md:px-0 flex-center flex-col">
               <div className="w-full bg-black max-w-[980px]">
                 <video ref={couplingVideoRef} className='pointer-events-none' preload='auto' autoPlay playsInline muted key={fullStoryModalCouplingVideo}>
                     <source src={fullStoryModalCouplingVideo} type='video/mp4'/>
@@ -115,25 +138,25 @@ const FullStoryModal = ({visible, handleClick}) => {
 
               <div className="w-full flex flex-col md:flex-row flex-wrap items-center md:items-start md:justify-around max-w-[980px] mt-[60px]">
                 <div className="">
-                  <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal pb-[30px] md:pb-0 lg:ml-20'>The titanium band is bonded with a new internal aluminum frame through solid‑state diffusion. This is an industry‑first innovation, using a thermomechanical process that <strong className='text-[#f5f5f7] font-semibold'>joins these two metals with incredible strength.</strong></p>
+                  <p id='fullstory-modal-text2' className='typography-site-body-fullstory-modal pb-[30px] md:pb-0 lg:ml-20 translate-y-20 opacity-0'>The titanium band is bonded with a new internal aluminum frame through solid‑state diffusion. This is an industry‑first innovation, using a thermomechanical process that <strong className='text-[#f5f5f7] font-semibold'>joins these two metals with incredible strength.</strong></p>
                 </div>
                 <div className="">
-                  <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal lg:ml-20'>The internal frame is also made from <strong className='text-[#f5f5f7] font-semibold'>100% recycled aluminum</strong>, which contributes to our overall usage of recycled materials and helps us work toward our 2030 climate goals.</p>
+                  <p id='fullstory-modal-text2' className='typography-site-body-fullstory-modal lg:ml-20 translate-y-20 opacity-0'>The internal frame is also made from <strong className='text-[#f5f5f7] font-semibold'>100% recycled aluminum</strong>, which contributes to our overall usage of recycled materials and helps us work toward our 2030 climate goals.</p>
                 </div>
               </div>
             </div>
 
-            <div className="w-full flex-center">
+            <div className="w-full flex-center px-12 md:px-0">
               <div className="pt-[120px] bg-black w-full flex flex-col md:flex-row flex-wrap items-center md:items-start md:justify-around max-w-[980px] px-5">
               <div className="lg:ml-20">
                 <img className="mb-5" src={trifectaImg} alt="Trifecta icon" />
                 <h3 className='typography-headline-secondary'>Trifecta of tough.</h3>
-                <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal mt-5'>A strong titanium band. The toughest back glass in a smartphone. And a Ceramic Shield front that’s even <strong className='text-[#f5f5f7] font-semibold'>tougher than any smartphone glass.</strong></p>
+                <p id='fullstory-modal-text3' className='typography-site-body-fullstory-modal mt-5 translate-y-20 opacity-0'>A strong titanium band. The toughest back glass in a smartphone. And a Ceramic Shield front that’s even <strong className='text-[#f5f5f7] font-semibold'>tougher than any smartphone glass.</strong></p>
               </div>
-              <div className="lg:ml-20">
+              <div className="lg:ml-20 mt-[100px] md:mt-0">
                 <img className="mb-5" src={raindropImg} alt="Trifecta icon" />
                 <h3 className='typography-headline-secondary'>Remarkably resistant.</h3>
-                <p id='fullstory-modal-text1' className='typography-site-body-fullstory-modal mt-5'>iPhone is <strong className='text-[#f5f5f7] font-semibold'>splash, water, and dust resistant.</strong> What a relief.</p>
+                <p id='fullstory-modal-text3' className='typography-site-body-fullstory-modal mt-5 translate-y-20 opacity-0'>iPhone is <strong className='text-[#f5f5f7] font-semibold'>splash, water, and dust resistant.</strong> What a relief.</p>
               </div>
             </div>
             </div>
