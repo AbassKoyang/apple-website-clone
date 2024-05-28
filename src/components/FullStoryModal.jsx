@@ -2,7 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
 import { RiCloseFill } from 'react-icons/ri'
-import { fullStoryModalCouplingVideo, fullStoryModalImage1img, fullStoryModalImage2img, fullStoryModalVideo, raindropImg, trifectaImg } from '../utils'
+import { fullStoryModalCouplingVideo, fullStoryModalImage1img, fullStoryModalImage2img, fullStoryModalVideo, raindropImg, trifectaImg, trueIntelligenceImg } from '../utils'
 import { ScrollTrigger } from 'gsap/all';
 import { MdOutlinePauseCircleOutline, MdOutlineReplay } from 'react-icons/md'
 
@@ -87,6 +87,27 @@ const FullStoryModal = ({visible, handleClick}) => {
         scroller: '#fullstory-modal',
     }})
 
+  gsap.to('#fullstory-modal-text4', {
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+        trigger: '#fullstory-modal-text4',
+        toggleActions: "play reverse play reverse",
+        start: 'top 70%',
+        end: 'top 0%',
+        scroller: '#fullstory-modal',
+    }})
+
+  gsap.to('#true-intelligence-image', {
+    opacity: 1,
+    scrollTrigger: {
+        trigger: '#true-intelligence-image',
+        toggleActions: "play reverse play reverse",
+        start: 'top 70%',
+        end: 'top 0%',
+        scroller: '#fullstory-modal',
+    }})
+
   }, [])
   return (
     <section id='fullstory-modal' className={` ${visible ? 'block top-0' : 'top-[100%]'} fixed right-0 w-screen h-screen flex justify-center bg-gray-300 backdrop-blur transition-all duration-500 ease-in-out pl-14 pr-11 md:pl-[25px] md:pr-3 py-10 overflow-y-scroll`}>
@@ -146,19 +167,31 @@ const FullStoryModal = ({visible, handleClick}) => {
               </div>
             </div>
 
-            <div className="w-full flex-center px-12 md:px-0">
-              <div className="pt-[120px] bg-black w-full flex flex-col md:flex-row flex-wrap items-center md:items-start md:justify-around max-w-[980px] px-5">
-              <div className="lg:ml-20">
-                <img className="mb-5" src={trifectaImg} alt="Trifecta icon" />
-                <h3 className='typography-headline-secondary'>Trifecta of tough.</h3>
-                <p id='fullstory-modal-text3' className='typography-site-body-fullstory-modal mt-5 translate-y-20 opacity-0'>A strong titanium band. The toughest back glass in a smartphone. And a Ceramic Shield front that’s even <strong className='text-[#f5f5f7] font-semibold'>tougher than any smartphone glass.</strong></p>
-              </div>
-              <div className="lg:ml-20 mt-[100px] md:mt-0">
-                <img className="mb-5" src={raindropImg} alt="Trifecta icon" />
-                <h3 className='typography-headline-secondary'>Remarkably resistant.</h3>
-                <p id='fullstory-modal-text3' className='typography-site-body-fullstory-modal mt-5 translate-y-20 opacity-0'>iPhone is <strong className='text-[#f5f5f7] font-semibold'>splash, water, and dust resistant.</strong> What a relief.</p>
+            <div className="w-full flex-center px-12 md:px-0 bg-black">
+              <div className="pt-[120px] w-full flex flex-col md:flex-row flex-wrap items-center md:items-start md:justify-around max-w-[980px] px-5">
+                <div className="lg:ml-20">
+                  <img className="mb-5" src={trifectaImg} alt="Trifecta icon" />
+                  <h3 className='typography-headline-secondary max-w-[280px]'>Trifecta of tough.</h3>
+                  <p id='fullstory-modal-text3' className='typography-site-body-fullstory-modal mt-5 translate-y-20 opacity-0'>A strong titanium band. The toughest back glass in a smartphone. And a Ceramic Shield front that’s even <strong className='text-[#f5f5f7] font-semibold'>tougher than any smartphone glass.</strong></p>
+                </div>
+                <div className="lg:ml-20 mt-[100px] md:mt-0">
+                  <img className="mb-5" src={raindropImg} alt="Trifecta icon" />
+                  <h3 className='typography-headline-secondary max-w-[280px]'>Remarkably resistant.</h3>
+                  <p id='fullstory-modal-text3' className='typography-site-body-fullstory-modal mt-5 translate-y-20 opacity-0'>iPhone is <strong className='text-[#f5f5f7] font-semibold'>splash, water, and dust resistant.</strong> What a relief.</p>
+                </div>
               </div>
             </div>
+
+            <div className='w-full flex-center bg-black px-12 md:px-0'>
+              <hr className='h-[1px] border-0 outline-0 w-full max-w-[980px] bg-[#424245] my-[120px]' />
+            </div>
+
+            <div className="w-full flex-center bg-black px-12 md:px-0">
+              <div className="w-full max-w-[980px]">
+                <h2 className='typography-headline-secondary lg:ml-20 mb-[30px]'>A display of<br /> true intelligence.</h2>
+                <p id='fullstory-modal-text4' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray mt-5 translate-y-20 opacity-0 lg:ml-20 max-w-[570px]'>iPhone 15 Pro has an <strong className='text-[#f5f5f7] font-semibold'>advanced Super Retina XDR display with ProMotion</strong>. It ramps up refresh rates to 120Hz when you need exceptional graphics performance. And ramps down to save power when you don’t.</p>
+                <img id='true-intelligence-image' className='lg:ml-20 mt-[60px] opacity-0' src={trueIntelligenceImg} alt="Iphone" />
+              </div>
             </div>
         </div>
     </section>

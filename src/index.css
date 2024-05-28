@@ -150,6 +150,6 @@ canvas {
     @apply text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray md:max-w-[325px]
   }
   .typography-headline-secondary{
-    @apply text-[32px] md:text-[40px] lg:text-[48px] leading-[1.125] md:leading-[1.1] lg:leading-[1.0834933333] font-semibold tracking-[.004em] md:tracking-[0em] lg:tracking-[-0.003em] text-[#f5f5f7] max-w-[280px]
+    @apply text-[32px] md:text-[40px] lg:text-[48px] leading-[1.125] md:leading-[1.1] lg:leading-[1.0834933333] font-semibold tracking-[.004em] md:tracking-[0em] lg:tracking-[-0.005em] text-[#f5f5f7]
   }
 }
