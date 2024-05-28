@@ -36,6 +36,8 @@ import fullStoryModalImage2 from "/assets/images/fullstory-modal-grid-image2.jpg
 import raindropImage from "/assets/images/raindrop-image.png"
 import trifectaImage from "/assets/images/trifecta-image.png"
 import trueIntelligenceImage from "/assets/images/fullstory-modal-intelligence-image.jpg"
+import homescreenImage from "/assets/images/fullstory-modal-iphone-homescreen-image.jpg"
+import wallpaperImage from "/assets/images/fullstory-modal-iphone-wallpaper-image.jpg"
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
@@ -69,5 +71,7 @@ export const fullStoryModalImage2img = fullStoryModalImage2;
 export const trifectaImg = trifectaImage;
 export const raindropImg = raindropImage;
 export const trueIntelligenceImg = trueIntelligenceImage;
+export const homeScreenImg = homescreenImage;
+export const wallPaperImg = wallpaperImage;
 export const chipImg = chip;
 export const frameImg = frame;

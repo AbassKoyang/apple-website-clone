@@ -45,7 +45,11 @@ const FullStory = () => {
         <div className="screen-max-width">
             <h2 id='full-story' className='section-heading'>Explore the full story.</h2>
             <div className="subsection pt-[100px] pb-[206px] md:pt-[200px] md:pb-[270px]" id="subsection">
-                <h4 className='ml-20 md:ml-24 max-w-[200px] md:max-w-max text-[40px] md:text-[80px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1] tracking-[0em] md:tracking-[-0.015em] mt-0'>iPhone. <br />Forged in titanium.</h4>
+                <div className="w-full flex-center">
+                    <div className="w-full max-w-[460px] md:max-w-[766px] lg:max-w-[1050px]">
+                    <h4 className='ml-16 md:ml-16 max-w-[200px] md:max-w-max text-[40px] md:text-[80px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1] tracking-[0em] md:tracking-[-0.015em] mt-0'>iPhone. <br />Forged in titanium.</h4>
+                </div>
+                </div>
                 <div className="mt-[45px] md:mt-24 w-full flex flex-col items-center relative">
                     <div className="w-full grid grid-rows-3 md:grid-rows-[517px] gap-5 mx-[105px] mb-[60px] max-w-[460px] md:max-w-[766px] lg:max-w-[1050px]">
                         <div className="row-span-1 flex justify-center items-end h-[400px] md:h-[517px] object-contain bg-black">
