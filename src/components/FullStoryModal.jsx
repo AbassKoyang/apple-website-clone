@@ -58,8 +58,9 @@ const FullStoryModal = ({visible, handleClick}) => {
       opacity: 1,
       scrollTrigger: {
           trigger: '#fullstory-modal-text1',
+          toggleActions: 'play reverse play reverse',
           start: 'top 70%',
-          end: '30%',
+          end: 'bottom 0%',
           scroller: '#fullstory-modal',
       }
   })
@@ -68,8 +69,9 @@ const FullStoryModal = ({visible, handleClick}) => {
       opacity: 1,
       scrollTrigger: {
           trigger: '#fullstory-modal-text2',
+          toggleActions: 'play reverse play reverse',
           start: 'top 70%',
-          end: '30%',
+          end: 'bottom 0%',
           scroller: '#fullstory-modal',
       }
   })
@@ -79,9 +81,9 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text3',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
   gsap.to('#fullstory-modal-text4', {
@@ -89,9 +91,9 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text4',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
 
@@ -100,9 +102,9 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text5',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
   gsap.to('#fullstory-modal-text6', {
@@ -110,9 +112,9 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text6',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
 
@@ -121,9 +123,9 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text7',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
   gsap.to('#fullstory-modal-text8', {
@@ -131,9 +133,9 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text8',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
   gsap.to('#fullstory-modal-text9', {
@@ -141,9 +143,9 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text9',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
   gsap.to('#fullstory-modal-text10', {
@@ -151,9 +153,9 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text10',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
 
@@ -161,9 +163,9 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#true-intelligence-image',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
 
@@ -171,27 +173,27 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-homescreen-img',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
   gsap.to('#fullstory-modal-lockscreen-img', {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-lockscreen-img',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
   gsap.to('#fullstory-modal-standby-img', {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-standby-img',
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse",
         start: 'top 70%',
-        end: 'top 0%',
+        end: 'bottom 0%',
         scroller: '#fullstory-modal',
     }})
 
