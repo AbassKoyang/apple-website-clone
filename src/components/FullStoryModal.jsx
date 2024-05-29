@@ -58,8 +58,8 @@ const FullStoryModal = ({visible, handleClick}) => {
       opacity: 1,
       scrollTrigger: {
           trigger: '#fullstory-modal-text1',
-          toggleActions: "play none reverse none",
           start: 'top 70%',
+          end: '30%',
           scroller: '#fullstory-modal',
       }
   })
@@ -68,8 +68,8 @@ const FullStoryModal = ({visible, handleClick}) => {
       opacity: 1,
       scrollTrigger: {
           trigger: '#fullstory-modal-text2',
-          toggleActions: "play none reverse none",
           start: 'top 70%',
+          end: '30%',
           scroller: '#fullstory-modal',
       }
   })
