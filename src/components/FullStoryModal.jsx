@@ -199,9 +199,9 @@ const FullStoryModal = ({visible, handleClick}) => {
 
   }, [])
   return (
-    <section id='fullstory-modal' className={` ${visible ? 'block top-0' : 'top-[100%]'} fixed right-0 w-screen h-screen flex justify-center bg-gray-300 backdrop-blur transition-all duration-500 ease-in-out pl-14 pr-11 md:pl-[25px] md:pr-3 py-10 overflow-y-scroll`}>
+    <section id='fullstory-modal' className={` ${visible ? 'block top-0' : 'top-[100%]'} fixed right-0 w-screen h-screen flex justify-center bg-gray-300 backdrop-blur transition-all duration-500 ease-in-out pl-6 pr-6 md:pl-[25px] md:pr-3 py-10 overflow-y-scroll`}>
 
-        <div className="w-full max-w-[375px] md:max-w-fit h-fit bg-black rounded-3xl relative">
+        <div className="w-full max-w-[375px] md:max-w-fit h-fit bg-black rounded-3xl relative overflow-y-hidden">
             <div className="p-0 m-0 flex justify-end sticky top-0">
                 <button onClick={ handleClick} aria-label='close modal' className='mt-[15px] mr-[15px] p-1 bg-[#333336] flex-center rounded-full transition-all duration-300 ease-in-out group'>
                     <RiCloseFill  className="text-[#f5f5f7] group-hover:text-white text-[25px]" />
@@ -284,12 +284,16 @@ const FullStoryModal = ({visible, handleClick}) => {
                 <div className="w-full grid grid-row-2 md:grid-cols-2 md:gap-[50px]">
                   <div className="row-span-1 md:col-span-1 flex flex-col items-start justify-between">
                     <p id='fullstory-modal-text8' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray lg:ml-20 max-w-[325px] translate-y-20 opacity-0'><strong className='text-[#f5f5f7] font-semibold'>Dynamic Island</strong> bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can easily track your next ride, sports scores, flight status, and more.</p>
-                    <img id="fullstory-modal-homescreen-img" className='mt-[60px] lg:ml-12 opacity-0' src={homeScreenImg} alt="Iphone 15 homescreen image" />
+                    <div className="w-full mt-[40px] md:mt-[60px] px-4 md:px-0 lg:ml-12 border-b border-b-[#424245]  md:border-0">
+                    <img id="fullstory-modal-homescreen-img" className='opacity-0' src={homeScreenImg} alt="Iphone 15 homescreen image" />
+                    </div>
                   </div>
 
-                  <div className="row-span-1 md:col-span flex flex-col items-start justify-between">
+                  <div className="row-span-1 md:col-span flex flex-col items-start justify-between mt-[85px] md:mt-0">
                     <p id='fullstory-modal-text9' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray lg:ml-20 max-w-[325px] translate-y-20 opacity-0'>With the<strong className='text-[#f5f5f7] font-semibold'>Always-On display</strong>, your Lock Screen stays glanceable, so you don’t have to tap it to stay in the know. Using smart algorithms, iPhone detects when it’s in your pocket or face down and goes dark to save battery life.</p>
-                    <img id="fullstory-modal-lockscreen-img" className='mt-[60px] lg:ml-12 opacity-0' src={wallPaperImg} alt="Iphone 15 wallpaper image" />
+                    <div className="w-full mt-[40px] md:mt-[60px] px-4 md:px-0 lg:ml-12 border-b">
+                    <img id="fullstory-modal-lockscreen-img" className='opacity-0' src={wallPaperImg} alt="Iphone 15 wallpaper image" />
+                    </div>
                   </div>
                 </div>
               </div>
