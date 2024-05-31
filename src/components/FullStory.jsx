@@ -44,7 +44,7 @@ const FullStory = () => {
     <section className="common-padding bg-zinc">
         <div className="screen-max-width">
             <h2 id='full-story' className='section-heading'>Explore the full story.</h2>
-            <div className="subsection pt-[100px] pb-[206px] md:pt-[200px] md:pb-[270px]" id="subsection">
+            <div className="fullstory-subsection pt-[100px]  md:pt-[200px]" id="fullstory-subsection">
                 <div className="w-full flex-center">
                     <div className="w-full max-w-[460px] md:max-w-[766px] lg:max-w-[1050px]">
                     <h4 className='ml-16 md:ml-16 max-w-[200px] md:max-w-max text-[40px] md:text-[80px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1] tracking-[0em] md:tracking-[-0.015em] mt-0'>iPhone. <br />Forged in titanium.</h4>
