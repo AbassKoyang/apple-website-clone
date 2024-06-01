@@ -40,6 +40,7 @@ import trueIntelligenceImage from "/assets/images/fullstory-modal-intelligence-i
 import homescreenImage from "/assets/images/fullstory-modal-iphone-homescreen-image.jpg"
 import wallpaperImage from "/assets/images/fullstory-modal-iphone-wallpaper-image.jpg"
 import standByImage from "/assets/images/full.jpg"
+import prochipGaming from "/assets/images/prochip-gaming.jpg"
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
@@ -79,3 +80,4 @@ export const wallPaperImg = wallpaperImage;
 export const standByImg = standByImage;
 export const chipImg = chip;
 export const frameImg = frame;
+export const prochipGamingImg = prochipGaming;

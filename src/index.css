@@ -161,9 +161,9 @@ canvas {
     @apply text-[32px] md:text-[40px] lg:text-[48px] leading-[1.125] md:leading-[1.1] lg:leading-[1.0834933333] font-semibold tracking-[.004em] md:tracking-[0em] lg:tracking-[-0.005em] text-[#f5f5f7]
   }
   .typography-site-headline-elevated{
-    @apply max-w-[280px] md:max-w-[519px] lg:max-w-[980px] text-[40px] leading-[1.1] font-semibold tracking-[0em] md:text-[64px] md:leading-[1.0625] md:tracking-[-0.009em] lg:text-[80px] lg:leading-[1.05] lg:tracking-[-0.015em] text-center
+    @apply max-w-[280px] md:max-w-[519px] lg:max-w-[980px] text-[40px] leading-[1.1] font-semibold tracking-[0em] md:text-[64px] md:leading-[1.0625] md:tracking-[-0.009em] lg:text-[80px] lg:leading-[1.05] lg:tracking-[-0.015em]
   }
   .typography-site-headline-reduced{
-    @apply max-w-[280px] md:max-w-[450px] lg:max-w-[980px] text-[#86868b] text-[21px] leading-[1.1904761905] font-semibold tracking-[.011em] md:text-[28px] md:leading-[1.1428571429] md:tracking-[0.007em] text-center
+    @apply max-w-[280px] md:max-w-[450px] lg:max-w-[980px] text-[#86868b] text-[21px] leading-[1.1904761905] font-semibold tracking-[.011em] md:text-[28px] md:leading-[1.1428571429] md:tracking-[0.007em]
   }
 }

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { chipImg, frameImg, gameVideo } from '../utils'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import CustomButton from './CustomButton'
+import ProchipSectionModal from './ProchipSectionModal'
 
 const ProchipSection = () => {
-
+    const [isModalVisible, setModalVisible] = useState(false);
     useGSAP(()=>{
         gsap.to('#prochip-text1', {
             y: 0,
@@ -40,8 +41,8 @@ const ProchipSection = () => {
         <div id="prochip" className="screen-max-width flex-center flex-col relative">
             <div className="w-full max-w-[1054px] flex flex-col items-center">
                 <img className='w-[180px]' src={chipImg}  alt="A17 pro chip" />
-                <h4 className='typography-site-headline-elevated mt-[45px] md:mt-[70px] lg:mt-[100px]'>A17 Pro chip.<br />A monster win for gaming.</h4>
-                <p className="typography-site-headline-reduced mt-[35px] md:mt-10">It’s here. The biggest redesign in the history of Apple GPUs.</p>
+                <h4 className='typography-site-headline-elevated text-center mt-[45px] md:mt-[70px] lg:mt-[100px]'>A17 Pro chip.<br />A monster win for gaming.</h4>
+                <p className="typography-site-headline-reduced mt-[35px] md:mt-10 text-center">It’s here. The biggest redesign in the history of Apple GPUs.</p>
                 <div className="w-[322px] md:w-[696px] lg:w-[1054px] mt-10 relative h-[160px] md:h-[340px] lg:h-[516px] overflow-hidden p-0 flex-center rounded-3xl lg:rounded-[100px]">
                     <img className='absolute top-0 left-0 w-full h-full z-20 m-0 p-0' src={frameImg} alt="Iphone 15 Pro frame" />
                     <div className="w-[96.5%] h-[95%] overflow-hidden rounded-[30px] flex items-center justify-center bg-black">
@@ -73,8 +74,9 @@ const ProchipSection = () => {
                     </div>
                 </div>
             </div>
-            <CustomButton target="#prochip" buttonText="Go deeper on A17 Pro"/>
+            <CustomButton target="#prochip" buttonText="Go deeper on A17 Pro" handleClick={() => setModalVisible(true)}/>
         </div>
+        <ProchipSectionModal visible={isModalVisible} handleClick={() => setModalVisible(false)} />
     </section>
   )
 }
