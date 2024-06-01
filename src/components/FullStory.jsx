@@ -79,7 +79,7 @@ const FullStory = () => {
                             </p>
                         </div>
                     </div>
-                    <CustomButton target="#full-story" handleClick={() => setModalVisible(true)} />
+                    <CustomButton buttonText="More on design & display" target="#full-story" handleClick={() => setModalVisible(true)} />
                 </div>
             </div>
         </div>

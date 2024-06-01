@@ -12,6 +12,7 @@ import exploremv from "/assets/videos/explore.mp4";
 import framemv from "/assets/videos/frame.mp4";
 import fullStoryModalmv from "/assets/videos/fullstory-modal-large-video.mp4";
 import fullStoryModalCouplingmv from "/assets/videos/fullstory-modal-coupling-video.mp4";
+import gamemv from "/assets/videos/game-video.mp4"
 
 import apple from "/assets/images/apple.svg";
 import search from "/assets/images/search.svg";
@@ -50,6 +51,7 @@ export const exploreVideo = exploremv;
 export const frameVideo = framemv;
 export const fullStoryModalVideo = fullStoryModalmv;
 export const fullStoryModalCouplingVideo = fullStoryModalCouplingmv;
+export const gameVideo = gamemv;
 
 export const appleImg = apple;
 export const searchImg = search;

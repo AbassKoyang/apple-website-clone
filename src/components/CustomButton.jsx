@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/all';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CustomButton = ({handleClick, target}) => {
+const CustomButton = ({handleClick, target, buttonText}) => {
 
     useGSAP(() => {
         const tl = gsap.timeline({
@@ -43,7 +43,7 @@ const CustomButton = ({handleClick, target}) => {
 
   return (
     <button onClick={handleClick} id='custom-button' className='scale-0 size-[70px] border-[12px] border-blue mt-[50px] md:mt-[100px] sticky bottom-[30px] flex items-center bg-gray-300 backdrop-blur rounded-full group'>
-        <span id='button-span' className="scale-0 ml-[32px] mr-[24px] text-[14px] md:text-[16px] leading-[1.381002381] font-semibold tracking-normal max-w-[30em] text-white">More on design & display</span>
+        <span id='button-span' className="scale-0 ml-[32px] mr-[24px] text-[14px] md:text-[16px] leading-[1.381002381] font-semibold tracking-normal max-w-[30em] text-white">{buttonText}</span>
         <span id='button-span' className="scale-0 flex-center bg-[#0071e3] rounded-[50%] mr-[10px]">
             <RiAddLine className="p-[2px] text-[36px] text-white opacity-80 group-hover:opacity-100 transition-all duration-200 ease-in-out" />
         </span>
