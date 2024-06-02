@@ -89,14 +89,14 @@ const Model = () => {
         })
         .to('#control-buttons-wrapper', {
             padding: '10px 20px',
-            duration: 0.5,
+            duration: 0.1,
         })
         .to('#radio-button', {
             scale: 1,
         })
         .to('#desc', {
             opacity: 1,
-            delay: 1,
+            delay: 0.5,
         })
     }, []);
 

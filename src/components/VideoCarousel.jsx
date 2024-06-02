@@ -38,62 +38,50 @@ const VideoCarousel = () => {
     }, [isEnd, videoId])
 
     useGSAP(() => {
-        gsap.to('#video-control', {
-            borderWidth: '0px',
-            translateY: 0, 
+        const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: '#slider-con',
-                start: 'top top',
+              trigger: '#slider-con',
+              start: "top 20%", // Start animation when the top of the element hits 80% of the viewport height
+              end: "bottom 20%", // End animation when the bottom of the element hits 20% of the viewport height
+              toggleActions: "play none none reverse" // Play the animation on enter
+
             }
+          });
+        tl.to('#video-control', {
+            scale: 0.9,
         })
-        gsap.to('#control-btn', {
+        .to('#video-control', {
+            borderWidth: 0,
+            delay: 0.3,
+            duration: 0.3,
+        })
+        .to('#video-control', {
+            width: 'auto',
+            height: '56px',
+            duration: 0.1,
+            delay: 0.1,
+        })
+        .to('#control-btn', {
             scale: 1,
-            duration: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '#slider-con',
-                start: "top top",
-            }
+            duration: 0.1,
         })
-        gsap.to('#progress-con', {
+        .to('#progress-con', {
             scale: 1,
-            duration: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '#slider-con',
-                start: "top top",
-            }
+            duration: 0.1,
         })
-        gsap.to('#progress-con', {
+        .to('#progress-con', {
             translateX: 0,
-            delay: 0.5,
-            duration: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '#slider-con',
-                start: "top top",
-            }
+            duration: 0.3
         })
-        gsap.to('#control-btn', {
+        .to('#control-btn', {
             translateX: 0,
-            delay: 0.5,
-            duration: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '#slider-con',
-                start: "top top",
-            }
+            duration: 0.3
         })
-        gsap.to('#progress-con', {
+        .to('#progress-con', {
             width: 'auto',
             height: 'auto',
-            delay: 0.5,
-            duration: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '#slider-con',
-                start: "top top",
-            }
+            delay: 0.1,
+            duration: 0.3
         })
         
         // gsap.to('#control-btn', {
@@ -103,7 +91,7 @@ const VideoCarousel = () => {
         //     translateX: 0,
         //     delay: 2,
         //     duration: 2,
-        //     ease: 'none',
+        //
         // })
         // gsap.to('#progress-con', {
         //     display: 'flex',
@@ -242,7 +230,7 @@ const handleLoadedMetadata = (i, e) => {
             ))}
         </div>
 
-        <div id='video-control' className="flex-center mt-16 translate-y-[100px] border-0">
+        <div id='video-control' className="sace-0 flex-center mt-16 size-[70px] border-[12px] border-blue rounded-full">
             <div id='progress-con' className="scale-0 py-5 px-7 size-[52px] bg-gray-300 backdrop-blur rounded-full translate-x-[34px] flex-center">
                 {videoRef.current.map((_, i) => (
                     <span key={i} ref={(el) => (videoDivRef.current[i] = el)} className='mx-2 size-2 bg-gray-200 rounded-full relative cursor-pointer'>
