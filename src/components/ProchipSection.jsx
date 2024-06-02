@@ -56,15 +56,15 @@ const ProchipSection = () => {
 
                 <p className='text-[17px] md:text-[21px] leading-[1.2353641176] font-semibold tracking-[-0.022em] text-gray mt-5 text-center'>Honkai: Star Rail</p>
 
-                <div className="w-full max-w-[980px] mt-[60px] flex items-center md:items-start flex-col gap-5 md:gap-0 md:flex-row md:justify-around">
-                    <div className="max-w-[330px]    typography-site-body-fullstory-modal">
-                        <p id='prochip-text1' className='translate-y-20 opacity-0'> A17 Pro is an entirely new class of iPhone chip that delivers our <strong className='text-[#f5f5f7] font-semibold'>best graphics performance by far.</strong></p>
-                        <p id='prochip-text2' className="mt-4 translate-y-20 opacity-0">
+                <div className="w-full max-w-[] md:max-w-[980px] mt-[60px] flex items-center justify-center md:items-start flex-col gap-5 md:gap-0 md:flex-row md:justify-around">
+                    <div className="w-full max-w-[330px]">
+                        <p id='prochip-text1' className='translate-y-20 opacity-0 typography-site-body-fullstory-modal'> A17 Pro is an entirely new class of iPhone chip that delivers our <strong className='text-[#f5f5f7] font-semibold'>best graphics performance by far.</strong></p>
+                        <p id='prochip-text2' className="mt-4 translate-y-20 opacity-0 typography-site-body-fullstory-modal">
                         Mobile <strong className='text-[#f5f5f7] font-semibold'>games will look and feel so immersive</strong>, with incredibly detailed environments and more realistic characters. And with industry-leading speed and efficiency, A17 Pro takes fast and runs with it.
                         </p>
                     </div>
-                    <div className="max-w-[330px]  typography-site-body-fullstory-modal">
-                    <figure id='prochip-text3' class="typography-site-body-fullstory-modal translate-y-20 opacity-0">
+                    <div className="w-full max-w-[330px]">
+                    <figure id='prochip-text3' className="typography-site-body-fullstory-modal translate-y-20 opacity-0">
                         New
                         <br />
                         <strong className='text-[32px] md:text-[40px] lg:text-[48px] text-[#f5f5f7] font-semibold'>Pro-class GPU</strong> 
@@ -74,7 +74,7 @@ const ProchipSection = () => {
                     </div>
                 </div>
             </div>
-            <CustomButton target="#prochip" buttonText="Go deeper on A17 Pro" handleClick={() => setModalVisible(true)}/>
+            <CustomButton target="#prochip" buttonId="prochip-button-id" spanId="prochip-button-id" buttonText="Go deeper on A17 Pro" handleClick={() => setModalVisible(true)}/>
         </div>
         <ProchipSectionModal visible={isModalVisible} handleClick={() => setModalVisible(false)} />
     </section>
