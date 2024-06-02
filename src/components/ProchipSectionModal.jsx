@@ -70,7 +70,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             scrollTrigger: {
             trigger: '#prochip-modal-text5',
             toggleActions: "play reverse play reverse",
-            start: 'top 70%',
+            start: 'top 80%',
             end: 'bottom 0%',
             scroller: '#prochip-section-modal',
         }})
@@ -80,7 +80,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             scrollTrigger: {
             trigger: '#prochip-modal-text6',
             toggleActions: "play reverse play reverse",
-            start: 'top 70%',
+            start: 'top 80%',
             end: 'bottom 0%',
             scroller: '#prochip-section-modal',
         }})
@@ -94,19 +94,19 @@ const ProchipSectionModal = ({visible, handleClick}) => {
                     <RiCloseFill  className="text-[#f5f5f7] group-hover:text-white text-[25px]" />
                 </button>
             </div>
-            <div className="w-full bg-black max-w-[980px] lg:pl-[82px] mt-8 px-12 md:px-0">
-                <h4 className='max-w-[280px] md:max-w-[519px] lg:max-w-[980px] text-[40px] leading-[1.1] font-semibold tracking-[0em] md:text-[64px] md:leading-[1.0625] md:tracking-[-0.009em]'>A17 Pro chip.<br />A monster win for gaming.</h4>
-                <p className='typography-site-headline-reduced mt-3'>A new, Pro‑class GPU enables games not<br />
+            <div className="w-full bg-black max-w-[700px] lg:max-w-[980px] lg:pl-[82px] mt-8 px-12 md:px-0">
+                <h4 className='max-w-[280px] md:max-w-full lg:max-w-[980px] text-[40px] leading-[1.1] font-semibold tracking-[0em] md:text-[48px] lg:text-[64px] md:leading-[1.0834933333] lg:leading-[1.0625] md:tracking-[-0.003em] lg:tracking-[-0.009em]'>A17 Pro chip.<br />A monster win for gaming.</h4>
+                <p className='max-w-[280px] md:max-w-[90%] lg:max-w-[980px] text-[#86868b] text-[21px] leading-[1.1904761905] font-semibold tracking-[.011em] md:text-[28px] md:leading-[1.1428571429] md:tracking-[0.007em] mt-3'>A new, Pro‑class GPU enables games not<br />
                 seen before on any smartphone.</p>
-                <div className="max-w-[821px] lg:my-20">
-                    <img id="prochip-modal-intense-video-image" className='w-full opacity-0' src={prochipGamingImg} alt="An image from a graphically intense video game" />
+                <div className="w-full flex-center my-[40px] md:my-[60px] lg:my-20">
+                    <img id="prochip-modal-intense-video-image" className='w-full max-w-[281px] md:max-w-[584px] lg:max-w-[821px] opacity-0' src={prochipGamingImg} alt="An image from a graphically intense video game" />
                 </div>
                 <div className="w-full flex items-center md:items-start flex-col gap-5 md:gap-0 md:flex-row md:justify-around">
-                    <div className="w-full md:max-w-[330px] typography-site-body-fullstory-modal">
+                    <div className="w-full md:max-w-[290px] lg:max-w-[330px] typography-site-body-fullstory-modal">
                         <p id='prochip-modal-text1' className='translate-y-20 opacity-0'>iPhone 15 Pro uses hardware-accelerated ray tracing for the first time — that’s up to four times faster than software‑based ray tracing, delivering <strong className='text-[#f5f5f7] font-semibold'>more fluid graphics and true‑to‑life lighting</strong>. It’s the fastest ray‑tracing performance in a smartphone.
                         </p>
                     </div>
-                    <div className="w-full md:max-w-[330px]  typography-site-body-fullstory-modal">
+                    <div className="w-full md:max-w-[290px] lg:max-w-[330px]  typography-site-body-fullstory-modal">
                         <p id='prochip-modal-text2' class="translate-y-20 opacity-0">
                         MetalFX Upscaling combines the performance of the GPU and the Neural Engine to produce <strong className='text-[#f5f5f7] font-semibold'>high‑resolution graphics while using much less power</strong>. So you can game on and on.
                         </p>
@@ -120,7 +120,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
 
             <div className="w-full bg-black max-w-[980px] lg:pl-[82px] px-12 md:px-0">
                 <div className="w-full flex-center">
-                    <img id="prochip-modal-chip-image" className="opacity-0 lg:w-[374px]" src={stylizedChipImg} alt="Stylized illustration of the A17 pro chip" />
+                    <img id="prochip-modal-chip-image" className="opacity-0 md: w-[342px] lg:w-[374px]" src={stylizedChipImg} alt="Stylized illustration of the A17 pro chip" />
                 </div>
                 <div className="w-full max-w-[980px] mt-[60px] flex items-start md:items-start flex-col gap-5 md:gap-0 md:flex-row md:justify-around">
                     <div className=" w-full md:w-full md:max-w-[330px] typography-site-body-fullstory-modal">
