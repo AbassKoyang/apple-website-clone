@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { chameleonImg } from '../utils'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
