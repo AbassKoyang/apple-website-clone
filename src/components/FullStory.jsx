@@ -2,6 +2,9 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
 import React, { useState } from 'react'
 import { RiAddLine } from "react-icons/ri";
+import { ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger);
 
 import { explore1Img, explore2Img, exploreVideo } from '../utils';
 import CustomButton from './CustomButton';
@@ -9,13 +12,14 @@ import FullStoryModal from './FullStoryModal';
 
 const FullStory = () => {
     const [isModalVisible, setModalVisible] = useState(false);
+
     useGSAP(() => {
         gsap.to('#full-story', {
             y: 0,
             opacity: 1,
             scrollTrigger: {
                 trigger: '#full-story',
-                toggleActions: "play reverse play reverse",
+                toggleActions: "play play play reverse",
                 start: 'top bottom'
             }
         })
@@ -25,7 +29,7 @@ const FullStory = () => {
             duration: 0.5,
             scrollTrigger: {
                 trigger: '#scaled-images-con',
-                toggleActions: "play reverse play reverse",
+                toggleActions: "play play play reverse",
                 start: 'top center'
             }
         })
@@ -34,11 +38,43 @@ const FullStory = () => {
             opacity: 1,
             scrollTrigger: {
                 trigger: '#full-story-text-con',
-                toggleActions: "play reverse play reverse",
+                toggleActions: "play play play reverse",
                 start: 'top 60%'
             }
         })
     }, []);
+    
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: '#fullstory',
+              start: "top 20%", // Start animation when the top of the element hits 80% of the viewport height
+              end: "bottom 20%", // End animation when the bottom of the element hits 20% of the viewport height
+              toggleActions: "play none none reverse" // Play the animation on enter
+
+            }
+          });
+        tl.to('#fullstory-button-id', {
+            scale: 0.9,
+        })
+        .to('#fullstory-button-id', {
+            borderWidth: 0,
+            delay: 0.3,
+            duration: 0.3,
+        })
+        .to('#fullstory-button-id', {
+            width: 'auto',
+            height: '56px',
+            duration: 0.3,
+            delay: 0.3,
+        })
+        .to('#fullstory-span-id', {
+            scale: 1,
+        })
+        .to('#fullstory-span-id', {
+            scale: 1,
+        })
+    }, [])
 
   return (
     <section className="common-padding bg-zinc">
@@ -79,7 +115,14 @@ const FullStory = () => {
                             </p>
                         </div>
                     </div>
-                    <CustomButton buttonText="More on design & display" target="#full-story" buttonId="fullstory-button-id" spanId="fullstory-button-id" handleClick={() => setModalVisible(true)} />
+
+                    <button onClick={() => setModalVisible(true)} id='fullstory-button-id' className='scale-0 size-[70px] border-[12px] border-blue mt-[50px] md:mt-[100px] sticky bottom-[30px] flex items-center bg-gray-300 backdrop-blur rounded-full group z-[500]'>
+                        <span id='fullstory-span-id' className="scale-0 ml-[32px] mr-[24px] text-[14px] md:text-[16px] leading-[1.381002381] font-semibold tracking-normal max-w-[30em] text-white">More on design & display</span>
+                        <span id='fullstory-span-id' className="scale-0 flex-center bg-[#0071e3] rounded-[50%] mr-[10px]">
+                            <RiAddLine className="p-[2px] text-[36px] text-white opacity-80 group-hover:opacity-100 transition-all duration-200 ease-in-out" />
+                        </span>
+                    </button>
+                    
                 </div>
             </div>
         </div>

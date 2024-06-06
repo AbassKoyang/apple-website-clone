@@ -40,7 +40,7 @@ const FullStoryModal = ({visible, handleClick}) => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: '#fullstory-modal-scaled-images-con',
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play play play reverse",
           start: 'top center',
           scroller: '#fullstory-modal'
         }
@@ -58,7 +58,7 @@ const FullStoryModal = ({visible, handleClick}) => {
       opacity: 1,
       scrollTrigger: {
           trigger: '#fullstory-modal-text1',
-          toggleActions: 'play reverse play reverse',
+          toggleActions: 'play play play reverse',
           start: 'top 70%',
           end: 'bottom 0%',
           scroller: '#fullstory-modal',
@@ -69,7 +69,7 @@ const FullStoryModal = ({visible, handleClick}) => {
       opacity: 1,
       scrollTrigger: {
           trigger: '#fullstory-modal-text2',
-          toggleActions: 'play reverse play reverse',
+          toggleActions: 'play play play reverse',
           start: 'top 70%',
           end: 'bottom 0%',
           scroller: '#fullstory-modal',
@@ -81,7 +81,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text3',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -91,7 +91,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text4',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -102,7 +102,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text5',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -112,7 +112,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text6',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -123,7 +123,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text7',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -133,7 +133,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text8',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -143,7 +143,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text9',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -153,7 +153,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-text10',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -163,7 +163,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#true-intelligence-image',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -173,7 +173,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-homescreen-img',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -182,7 +182,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-lockscreen-img',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -191,7 +191,7 @@ const FullStoryModal = ({visible, handleClick}) => {
     opacity: 1,
     scrollTrigger: {
         trigger: '#fullstory-modal-standby-img',
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play play play reverse",
         start: 'top 70%',
         end: 'bottom 0%',
         scroller: '#fullstory-modal',
@@ -257,7 +257,7 @@ const FullStoryModal = ({visible, handleClick}) => {
             </div>
 
             <div className="pt-[120px] w-full flex-center px-12 md:px-0 bg-black">
-              <div className="w-full flex flex-col md:flex-row flex-wrap items-center md:items-start md:justify-around max-w-[980px]">
+              <div className="w-full flex flex-col md:flex-row flex-wrap items-center md:items-start md:justify-between lg:justify-around md:max-w-[703.2px] lg:max-w-[980px]">
                 <div className="">
                   <img className="mb-5" src={trifectaImg} alt="Trifecta icon" />
                   <h3 className='typography-headline-secondary max-w-[280px]'>Trifecta of tough.</h3>
@@ -272,27 +272,27 @@ const FullStoryModal = ({visible, handleClick}) => {
             </div>
 
             <div className='w-full flex-center bg-black px-12 md:px-0'>
-              <hr className='h-[1px] border-0 outline-0 w-full max-w-[980px] bg-[#424245] my-[120px]' />
+              <hr className='h-[1px] border-0 outline-0 w-full md:max-w-[703.2px] lg:max-w-[980px] bg-[#424245] my-[120px]' />
             </div>
 
             <div className="w-full flex-center bg-black px-12 md:px-0">
-              <div className="w-full max-w-[980px] border-b border-b-[#424245]">
-                <h2 className='typography-headline-secondary lg:ml-20 mb-[30px]'>A display of<br /> true intelligence.</h2>
-                <p id='fullstory-modal-text7' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray mt-5 translate-y-20 opacity-0 lg:ml-20 max-w-[570px]'>iPhone 15 Pro has an <strong className='text-[#f5f5f7] font-semibold'>advanced Super Retina XDR display with ProMotion</strong>. It ramps up refresh rates to 120Hz when you need exceptional graphics performance. And ramps down to save power when you don’t.</p>
-                <img id='true-intelligence-image' className='lg:ml-20 my-[60px] opacity-0' src={trueIntelligenceImg} alt="Phone 15 Pro playing the Apple TV+ show, Foundation, showcasing the Super Retina XDR display" />
+              <div className="w-full md:max-w-[703.2px] lg:max-w-[980px] border-b border-b-[#424245]">
+                <h2 className='typography-headline-secondary md:ml-20 mb-[30px]'>A display of<br /> true intelligence.</h2>
+                <p id='fullstory-modal-text7' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray mt-5 translate-y-20 opacity-0 md:ml-20 max-w-[570px]'>iPhone 15 Pro has an <strong className='text-[#f5f5f7] font-semibold'>advanced Super Retina XDR display with ProMotion</strong>. It ramps up refresh rates to 120Hz when you need exceptional graphics performance. And ramps down to save power when you don’t.</p>
+                <img id='true-intelligence-image' className='md:w-[583px] lg:w-auto md:ml-20 my-[60px] opacity-0' src={trueIntelligenceImg} alt="Phone 15 Pro playing the Apple TV+ show, Foundation, showcasing the Super Retina XDR display" />
 
-                <div className="w-full grid grid-row-2 md:grid-cols-2 md:gap-[50px]">
+                <div className="w-full grid grid-row-2 md:grid-cols-2 md:px-20 lg:px-0 md:gap-[50px]">
                   <div className="row-span-1 md:col-span-1 flex flex-col items-start justify-between">
-                    <p id='fullstory-modal-text8' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray lg:ml-20 max-w-[325px] translate-y-20 opacity-0'><strong className='text-[#f5f5f7] font-semibold'>Dynamic Island</strong> bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can easily track your next ride, sports scores, flight status, and more.</p>
+                    <p id='fullstory-modal-text8' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray lg:ml-20 md:max-w-[235px] max-w-[325px] translate-y-20 opacity-0'><strong className='text-[#f5f5f7] font-semibold'>Dynamic Island</strong> bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can easily track your next ride, sports scores, flight status, and more.</p>
                     <div className="w-full mt-[40px] md:mt-[60px] px-4 md:px-0 lg:ml-12 border-b border-b-[#424245]  md:border-0">
-                    <img id="fullstory-modal-homescreen-img" className='opacity-0' src={homeScreenImg} alt="Iphone 15 homescreen image" />
+                    <img id="fullstory-modal-homescreen-img" className='opacity-0 md:w-[286px] lg:w-auto' src={homeScreenImg} alt="Iphone 15 homescreen image" />
                     </div>
                   </div>
 
-                  <div className="row-span-1 md:col-span flex flex-col items-start justify-between mt-[85px] md:mt-0">
-                    <p id='fullstory-modal-text9' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray lg:ml-20 max-w-[325px] translate-y-20 opacity-0'>With the<strong className='text-[#f5f5f7] font-semibold'>Always-On display</strong>, your Lock Screen stays glanceable, so you don’t have to tap it to stay in the know. Using smart algorithms, iPhone detects when it’s in your pocket or face down and goes dark to save battery life.</p>
-                    <div className="w-full mt-[40px] md:mt-[60px] px-4 md:px-0 lg:ml-12 border-b">
-                    <img id="fullstory-modal-lockscreen-img" className='opacity-0' src={wallPaperImg} alt="Iphone 15 wallpaper image" />
+                  <div className="row-span-1 md:col-span flex flex-col items-end justify-between mt-[85px] md:mt-0">
+                    <p id='fullstory-modal-text9' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray lg:ml-20 md:max-w-[235px] max-w-[325px] translate-y-20 opacity-0'>With the<strong className='text-[#f5f5f7] font-semibold'>Always-On display</strong>, your Lock Screen stays glanceable, so you don’t have to tap it to stay in the know. Using smart algorithms, iPhone detects when it’s in your pocket or face down and goes dark to save battery life.</p>
+                    <div className="w-full mt-[40px] md:mt-[60px] px-4 md:px-0 lg:ml-12 border-b border-b-[#424245] md:border-b-0">
+                    <img id="fullstory-modal-lockscreen-img" className='opacity-0 md:w-[286px] lg:w-auto' src={wallPaperImg} alt="Iphone 15 wallpaper image" />
                     </div>
                   </div>
                 </div>
@@ -301,10 +301,10 @@ const FullStoryModal = ({visible, handleClick}) => {
 
 
             <div className="w-full flex-center bg-black px-12 md:px-0 py-[120px] rounded-b-3xl">
-              <div className="w-full max-w-[980px]">
+              <div className="w-full md:px-20 lg:px-0 md:max-w-[703.2px] max-w-[980px]">
                 <h2 className='typography-headline-secondary lg:ml-20 mb-[30px]'>StandBy for<br /> something special.</h2>
                 <div className="w-full pt-20 flex flex-col items-center justify-center">
-                  <img id='fullstory-modal-standby-img' className='pb-[60px] w-[504px] opacity-0' src={standByImg} alt="Stand by clock" />
+                  <img id='fullstory-modal-standby-img' className='pb-[60px] md:w-[360px] lg:w-[504px] opacity-0' src={standByImg} alt="Stand by clock" />
                   <p id='fullstory-modal-text10' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[652px] translate-y-20 opacity-0'>StandBy <strong className='text-[#f5f5f7] font-semibold'>turns your iPhone into a new, full-screen experience</strong> with glanceable information you can see from a distance. Just set it on its side while charging to display the time, showcase your favorite photos, or keep an eye on your widgets. Thanks to the Always‑On display, it’s persistent. But at night, the screen dims so you can sleep easy.</p>
                 </div>
               </div>

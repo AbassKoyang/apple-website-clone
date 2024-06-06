@@ -10,7 +10,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             opacity: 1,
             scrollTrigger: {
             trigger: '#prochip-modal-intense-video-image',
-            toggleActions: "play reverse play reverse",
+            toggleActions: "play play play reverse",
             start: 'top 70%',
             end: 'bottom 0%',
             scroller: '#prochip-section-modal',
@@ -19,7 +19,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             opacity: 1,
             scrollTrigger: {
             trigger: '#prochip-modal-chip-image',
-            toggleActions: "play reverse play reverse",
+            toggleActions: "play play play reverse",
             start: 'top 70%',
             end: 'bottom 0%',
             scroller: '#prochip-section-modal',
@@ -29,7 +29,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             opacity: 1,
             scrollTrigger: {
             trigger: '#prochip-modal-text1',
-            toggleActions: "play reverse play reverse",
+            toggleActions: "play play play reverse",
             start: 'top 70%',
             end: 'bottom 0%',
             scroller: '#prochip-section-modal',
@@ -39,7 +39,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             opacity: 1,
             scrollTrigger: {
             trigger: '#prochip-modal-text2',
-            toggleActions: "play reverse play reverse",
+            toggleActions: "play play play reverse",
             start: 'top 70%',
             end: 'bottom 0%',
             scroller: '#prochip-section-modal',
@@ -49,7 +49,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             opacity: 1,
             scrollTrigger: {
             trigger: '#prochip-modal-text3',
-            toggleActions: "play reverse play reverse",
+            toggleActions: "play play play reverse",
             start: 'top 70%',
             end: 'bottom 0%',
             scroller: '#prochip-section-modal',
@@ -59,7 +59,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             opacity: 1,
             scrollTrigger: {
             trigger: '#prochip-modal-text4',
-            toggleActions: "play reverse play reverse",
+            toggleActions: "play play play reverse",
             start: 'top 70%',
             end: 'bottom 0%',
             scroller: '#prochip-section-modal',
@@ -69,7 +69,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             opacity: 1,
             scrollTrigger: {
             trigger: '#prochip-modal-text5',
-            toggleActions: "play reverse play reverse",
+            toggleActions: "play play play reverse",
             start: 'top 80%',
             end: 'bottom 0%',
             scroller: '#prochip-section-modal',
@@ -79,7 +79,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             opacity: 1,
             scrollTrigger: {
             trigger: '#prochip-modal-text6',
-            toggleActions: "play reverse play reverse",
+            toggleActions: "play play play reverse",
             start: 'top 80%',
             end: 'bottom 0%',
             scroller: '#prochip-section-modal',
@@ -107,7 +107,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
                         </p>
                     </div>
                     <div className="w-full md:max-w-[290px] lg:max-w-[330px]  typography-site-body-fullstory-modal">
-                        <p id='prochip-modal-text2' class="translate-y-20 opacity-0">
+                        <p id='prochip-modal-text2' className="translate-y-20 opacity-0">
                         MetalFX Upscaling combines the performance of the GPU and the Neural Engine to produce <strong className='text-[#f5f5f7] font-semibold'>high‑resolution graphics while using much less power</strong>. So you can game on and on.
                         </p>
                     </div>
@@ -115,7 +115,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
             </div>
 
             <div className='w-full flex-center bg-black px-12 md:px-0'>
-              <hr className='h-[1px] border-0 outline-0 w-full max-w-[980px] bg-[#424245] my-[120px]' />
+              <hr className='h-[1px] border-0 outline-0 w-full md:max-w-[703.2px] lg:max-w-[980px] bg-[#424245] my-[120px]' />
             </div>
 
             <div className="w-full bg-black max-w-[980px] lg:pl-[82px] px-12 md:px-0">
@@ -124,7 +124,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
                 </div>
                 <div className="w-full max-w-[980px] mt-[60px] flex items-start md:items-start flex-col gap-5 md:gap-0 md:flex-row md:justify-around">
                     <div className=" w-full md:w-full md:max-w-[330px] typography-site-body-fullstory-modal">
-                        <figure id='prochip-modal-text3' class="typography-site-body-fullstory-modal translate-y-20 opacity-0">
+                        <figure id='prochip-modal-text3' className="typography-site-body-fullstory-modal translate-y-20 opacity-0">
                             <span>Up to</span>
                             <br />
                             <strong className='text-[32px] md:text-[40px] lg:text-[48px] my-1 text-[#f5f5f7] font-semibold'>20% faster GPU</strong> 
@@ -133,7 +133,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
                         </figure>
                     </div>
                     <div className="w-full md:max-w-[330px] typography-site-body-fullstory-modal">
-                        <figure id='prochip-modal-text4' class="typography-site-body-fullstory-modal translate-y-20 opacity-0">
+                        <figure id='prochip-modal-text4' className="typography-site-body-fullstory-modal translate-y-20 opacity-0">
                             <span>Up to</span>
                             <br />
                             <strong className='text-[32px] md:text-[40px] lg:text-[48px] my-1 text-[#f5f5f7] font-semibold'>4x faster ray tracing</strong> 
@@ -144,7 +144,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
                 </div>
                 <div className="w-full max-w-[980px] mt-[60px] flex items-center md:items-start flex-col gap-5 md:gap-0 md:flex-row md:justify-around">
                     <div className="w-full md:max-w-[330px] typography-site-body-fullstory-modal">
-                        <figure id='prochip-modal-text5' class="typography-site-body-fullstory-modal translate-y-20 opacity-0">
+                        <figure id='prochip-modal-text5' className="typography-site-body-fullstory-modal translate-y-20 opacity-0">
                             <span>Up to</span>
                             <br />
                             <strong className='text-[32px] md:text-[40px] lg:text-[48px] my-1 text-[#f5f5f7] font-semibold'>20% faster CPU</strong> 
@@ -153,7 +153,7 @@ const ProchipSectionModal = ({visible, handleClick}) => {
                         </figure>
                     </div>
                     <div className="w-full md:max-w-[330px] typography-site-body-fullstory-modal">
-                        <figure id='prochip-modal-text6' class="typography-site-body-fullstory-modal translate-y-20 opacity-0">
+                        <figure id='prochip-modal-text6' className="typography-site-body-fullstory-modal translate-y-20 opacity-0">
                             <span>Up to</span>
                             <br />
                             <strong className='text-[32px] md:text-[40px] lg:text-[48px] my-1 text-[#f5f5f7] font-semibold'>2x faster Neural Engine</strong> 
