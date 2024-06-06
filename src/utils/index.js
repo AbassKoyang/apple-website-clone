@@ -42,6 +42,7 @@ import wallpaperImage from "/assets/images/fullstory-modal-iphone-wallpaper-imag
 import standByImage from "/assets/images/full.jpg"
 import prochipGaming from "/assets/images/prochip-gaming.jpg"
 import stylizedChip from "/assets/images/stylized-chip.jpg"
+import chameleonImage from "/assets/images/chameleon-image.jpg"
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
@@ -83,3 +84,4 @@ export const chipImg = chip;
 export const frameImg = frame;
 export const prochipGamingImg = prochipGaming;
 export const stylizedChipImg = stylizedChip;
+export const chameleonImg = chameleonImage;

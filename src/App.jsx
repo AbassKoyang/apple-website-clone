@@ -4,6 +4,7 @@ import Highlights from './components/Highlights';
 import Model from './components/Model';
 import FullStory from './components/FullStory';
 import ProchipSection from './components/ProchipSection';
+import CameraSection from './components/CameraSection';
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
         <Model />
         <FullStory />
         <ProchipSection/>
+        <CameraSection />
       </main>
   )
 }
