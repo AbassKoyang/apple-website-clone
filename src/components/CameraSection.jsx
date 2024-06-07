@@ -114,19 +114,36 @@ const CameraSection = () => {
     }, [])
 
     const [imageInViewId, setImageInViewId] = useState(0);
-    // const carouselRef = useRef(null);
-    // useGSAP(()=> {
-     
-    // }, [ImagesetImageInViewId])
+    const [translateX, setTranslateX] = useState(0);
+
+    const handleClickForward = () => {
+        if(translateX > -1500){
+            setTranslateX(prevTranslateX => prevTranslateX - 300);
+        } else if(translateX <= -1500){
+            setTranslateX(0);
+        }else{
+            null
+        }
+    };
+    const handleClickBackward = () => {
+        if(translateX < 0){
+            setTranslateX(prevTranslateX => prevTranslateX + 300);
+        }else if(translateX >= 0){
+            setTranslateX(-1500);
+        }else{
+            null
+        }
+    };
 
     const handleCarousel = (direction) => {
         switch (direction) {
             case 'forward':
-                if(imageInViewId >= 3){
+                if(imageInViewId >= 4){
                     setImageInViewId(0);
                 } else {
-                    setImageInViewId((prev) => prev + 1);
+                    setImageInViewId((prev) => prev + 1);                    
                 }
+                handleClickForward();
                 break;
             case 'backward':
                 if(imageInViewId <= 0 ){
@@ -134,6 +151,7 @@ const CameraSection = () => {
                 } else {
                     setImageInViewId((prev) => prev - 1);
                 }
+                handleClickBackward();
                 break;
             default:
                 break;
@@ -168,9 +186,9 @@ const CameraSection = () => {
                 </div>
             </div>
 
-            <div className="w-full flex items-center h-screen overflow-scroll gap-5">
+            <div className="min-w-full flex items-center h-screen overflow-hidden gap-5">
                 {images.map((image, index) => (
-                    <div className="w-[500px] h-[300px] bg-blue">
+                    <div className={`${image.id === imageInViewId ? 'w-[500px] h-[300px]' : 'w-[400px] h-[200px]'} bg-blue transition-all duration-300 ease-in-out flex-1`} style={{ transform: `translateX(${translateX}px)` }}>
                         {image.url ? (
                             <img className={`${image.id === imageInViewId ? 'opacity-1' : 'opacity-30'} w-full h-full transition-all duration-300 ease-in-out`} src={image.url} alt={image.alt} />
                         ) : null}
