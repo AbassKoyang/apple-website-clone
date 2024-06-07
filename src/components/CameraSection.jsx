@@ -1,9 +1,47 @@
-import React, { useState } from 'react'
-import { chameleonImg } from '../utils'
+import React, { useEffect, useRef, useState } from 'react'
+import { chameleonImg, chipImg, stylizedChipImg, trueIntelligenceImg } from '../utils'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { RiAddLine } from 'react-icons/ri'
 import { ScrollTrigger } from 'gsap/all';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/navigation';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+
+const images = [
+  {
+    id: 0,
+    url: '',
+    alt: ""
+  },
+  {
+    id: 1,
+    url: chameleonImg,
+    alt: "Chameleon Image"
+  },
+  {
+    id: 2,
+    url: trueIntelligenceImg,
+    alt: "Intelligence Image"
+  },
+  {
+    id: 3,
+    url: stylizedChipImg,
+    alt: "Chip Image"
+  },
+  {
+    id:4,
+    url: chipImg,
+    alt: "Chip Image"
+  },
+  
+];
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,6 +113,35 @@ const CameraSection = () => {
         })
     }, [])
 
+    const [imageInViewId, setImageInViewId] = useState(0);
+    // const carouselRef = useRef(null);
+    // useGSAP(()=> {
+     
+    // }, [ImagesetImageInViewId])
+
+    const handleCarousel = (direction) => {
+        switch (direction) {
+            case 'forward':
+                if(imageInViewId >= 3){
+                    setImageInViewId(0);
+                } else {
+                    setImageInViewId((prev) => prev + 1);
+                }
+                break;
+            case 'backward':
+                if(imageInViewId <= 0 ){
+                    setImageInViewId(0);
+                } else {
+                    setImageInViewId((prev) => prev - 1);
+                }
+                break;
+            default:
+                break;
+        }
+        console.log(imageInViewId)
+    }
+    
+
   return (
     <section className="common-padding">
         <div id="camera-section" className="screen-max-width flex-center flex-col relative">
@@ -101,12 +168,24 @@ const CameraSection = () => {
                 </div>
             </div>
 
+            <div className="w-full flex items-center h-screen overflow-scroll gap-5">
+                {images.map((image, index) => (
+                    <div className="w-[500px] h-[300px] bg-blue">
+                        {image.url ? (
+                            <img className={`${image.id === imageInViewId ? 'opacity-1' : 'opacity-30'} w-full h-full transition-all duration-300 ease-in-out`} src={image.url} alt={image.alt} />
+                        ) : null}
+                    </div>
+                ))}
+            </div>
+            <button onClick={() => handleCarousel('forward')}>Forward</button>
+            <button onClick={() => handleCarousel('backward')}>Backward</button>
             <button onClick={() => setModalVisible(true)} id='camera-section-button-id' className='scale-0 size-[70px] border-[12px] border-blue mt-[50px] md:mt-[100px] sticky bottom-[30px] flex items-center bg-gray-300 backdrop-blur rounded-full group z-[500]'>
                 <span id='camera-section-span-id' className="scale-0 ml-[32px] mr-[24px] text-[14px] md:text-[16px] leading-[1.381002381] font-semibold tracking-normal max-w-[30em] text-white">Zoom in on the camera</span>
                 <span id='camera-section-span-id' className="scale-0 flex-center bg-[#0071e3] rounded-[50%] mr-[10px]">
                     <RiAddLine className="p-[2px] text-[36px] text-white opacity-80 group-hover:opacity-100 transition-all duration-200 ease-in-out" />
                 </span>
             </button>
+
         </div>
     </section>
   )
