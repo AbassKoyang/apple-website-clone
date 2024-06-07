@@ -43,6 +43,13 @@ import standByImage from "/assets/images/full.jpg"
 import prochipGaming from "/assets/images/prochip-gaming.jpg"
 import stylizedChip from "/assets/images/stylized-chip.jpg"
 import chameleonImage from "/assets/images/chameleon-image.jpg"
+import carouselImage1 from "/assets/images/carousel-image-1.jpg"
+import carouselImage2 from "/assets/images/ca.jpg"
+import carouselImage3 from "/assets/images/carousel-image-3.jpg"
+import carouselImage4 from "/assets/images/carousel-image-4.jpg"
+import carouselImage5 from "/assets/images/carousel-image-5.jpg"
+import carouselImage6 from "/assets/images/carousel-image-6.jpg"
+import carouselImage7 from "/assets/images/carousel-image-7.jpg"
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
@@ -85,3 +92,10 @@ export const frameImg = frame;
 export const prochipGamingImg = prochipGaming;
 export const stylizedChipImg = stylizedChip;
 export const chameleonImg = chameleonImage;
+export const carouselImg1 = carouselImage1;
+export const carouselImg2 = carouselImage2;
+export const carouselImg3 = carouselImage3;
+export const carouselImg4 = carouselImage4;
+export const carouselImg5 = carouselImage5;
+export const carouselImg6 = carouselImage6;
+export const carouselImg7 = carouselImage7;

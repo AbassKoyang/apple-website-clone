@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { chameleonImg, chipImg, stylizedChipImg, trueIntelligenceImg } from '../utils'
+import { carouselImg1, carouselImg2, carouselImg3, carouselImg4, carouselImg5, carouselImg6, carouselImg7, chameleonImg, chipImg, stylizedChipImg, trueIntelligenceImg } from '../utils'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { RiAddLine } from 'react-icons/ri'
 import { ScrollTrigger } from 'gsap/all';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, } from 'swiper/react';
 import 'swiper/css/navigation';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -12,7 +12,8 @@ import 'swiper/css/pagination';
 
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+import { GoChevronLeft, GoChevronRight } from 'react-icons/go'
 
 const images = [
   {
@@ -186,7 +187,7 @@ const CameraSection = () => {
                 </div>
             </div>
 
-            <div className="min-w-full flex items-center h-screen overflow-hidden gap-5">
+            {/* <div className="min-w-full flex items-center h-screen overflow-hidden gap-5">
                 {images.map((image, index) => (
                     <div className={`${image.id === imageInViewId ? 'w-[500px] h-[300px]' : 'w-[400px] h-[200px]'} bg-blue transition-all duration-300 ease-in-out flex-1`} style={{ transform: `translateX(${translateX}px)` }}>
                         {image.url ? (
@@ -196,7 +197,60 @@ const CameraSection = () => {
                 ))}
             </div>
             <button onClick={() => handleCarousel('forward')}>Forward</button>
-            <button onClick={() => handleCarousel('backward')}>Backward</button>
+            <button onClick={() => handleCarousel('backward')}>Backward</button> */}
+
+            <div className="w-screen h-fit pt-[60px]">
+                            <Swiper
+                    effect={'coverflow'}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={'auto'}
+                    coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                    }}
+                    pagination={false}
+                    navigation={{
+                        nextEl: '.carousel-next-button',
+                        prevEl: '.carousel-prev-button',
+                        clickable: true,
+                    }}
+                    modules={[EffectCoverflow, Navigation]}
+                    className="w-full"
+                >
+                    <SwiperSlide  className="w-[653px] h-[490px]">
+                    <img className="w-full h-full" src={carouselImg1} />
+                    </SwiperSlide>
+                    <SwiperSlide  className="w-[653px] h-[490px]">
+                    <img className="w-full h-full" src={carouselImg2} />
+                    </SwiperSlide>
+                    <SwiperSlide  className="w-[653px] h-[490px]">
+                    <img className="w-full h-full" src={carouselImg3} />
+                    </SwiperSlide>
+                    <SwiperSlide  className="w-[653px] h-[490px]">
+                    <img className="w-full h-full" src={carouselImg4} />
+                    </SwiperSlide>
+                    <SwiperSlide  className="w-[653px] h-[490px]">
+                    <img className="w-full h-full" src={carouselImg5} />
+                    </SwiperSlide>
+                    <SwiperSlide  className="w-[653px] h-[490px]">
+                    <img className="w-full h-full" src={carouselImg6} />
+                    </SwiperSlide>
+                    <SwiperSlide  className="w-[653px] h-[490px]">
+                    <img className="w-full h-full" src={carouselImg7} />
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+            <div className="w-full flex items-center justify-center max-w-[980px] relative">
+                <p>jkdksjdkj</p>
+                <div className="flex gap-4 items-center absolute right-0">
+                    <button className='carousel-prev-button rounded-full bg-gray-300 p-4'><GoChevronLeft /></button>
+                    <button className='carousel-next-button rounded-full bg-gray-300 p-4'><GoChevronRight /></button>
+                </div>
+            </div>
             <button onClick={() => setModalVisible(true)} id='camera-section-button-id' className='scale-0 size-[70px] border-[12px] border-blue mt-[50px] md:mt-[100px] sticky bottom-[30px] flex items-center bg-gray-300 backdrop-blur rounded-full group z-[500]'>
                 <span id='camera-section-span-id' className="scale-0 ml-[32px] mr-[24px] text-[14px] md:text-[16px] leading-[1.381002381] font-semibold tracking-normal max-w-[30em] text-white">Zoom in on the camera</span>
                 <span id='camera-section-span-id' className="scale-0 flex-center bg-[#0071e3] rounded-[50%] mr-[10px]">
