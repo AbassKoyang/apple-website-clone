@@ -14,43 +14,46 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+import CameraSectionModal from './CameraSectionModal'
 
-const images = [
-  {
-    id: 0,
-    url: '',
-    alt: ""
-  },
-  {
-    id: 1,
-    url: chameleonImg,
-    alt: "Chameleon Image"
-  },
-  {
-    id: 2,
-    url: trueIntelligenceImg,
-    alt: "Intelligence Image"
-  },
-  {
-    id: 3,
-    url: stylizedChipImg,
-    alt: "Chip Image"
-  },
-  {
-    id:4,
-    url: chipImg,
-    alt: "Chip Image"
-  },
+// const images = [
+//   {
+//     id: 0,
+//     url: '',
+//     alt: ""
+//   },
+//   {
+//     id: 1,
+//     url: chameleonImg,
+//     alt: "Chameleon Image"
+//   },
+//   {
+//     id: 2,
+//     url: trueIntelligenceImg,
+//     alt: "Intelligence Image"
+//   },
+//   {
+//     id: 3,
+//     url: stylizedChipImg,
+//     alt: "Chip Image"
+//   },
+//   {
+//     id:4,
+//     url: chipImg,
+//     alt: "Chip Image"
+//   },
   
-];
+// ];
 
 gsap.registerPlugin(ScrollTrigger);
 
 const CameraSection = () => {
+    // States
     const [isModalVisible, setModalVisible] = useState(false);
     const [carouselLabel, setCarouselLabel] = useState('');
     const [carouselIndex, setCarouselIndex] = useState(0);
 
+    // useEffect to change the carousel description when the image in view is changed
     useEffect(() => {
         switch (carouselIndex) {
           case 0:
@@ -78,6 +81,7 @@ const CameraSection = () => {
         }
       }, [carouselIndex])
 
+    //   functions to increment or decrement carouselindex  when the next or previous buttons are clicked
       const handleCarouselNextButtonClick = () => {
         setCarouselIndex((prev) => prev + 1);
       }
@@ -85,6 +89,7 @@ const CameraSection = () => {
         setCarouselIndex((prev) => prev - 1);
       }
 
+    //Gsap Animations
     useGSAP(() => {
         gsap.to('#camera-section-heading', {
             opacity: 1,
@@ -104,6 +109,36 @@ const CameraSection = () => {
                 scrub: true,
             }
         })
+        gsap.to('#camera-section-text2', {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '#camera-section-text2',
+                toggleActions: "play play play reverse",
+                start: 'top 70%',
+                end: 'bottom 0%',
+            }
+        })
+        gsap.to('#camera-section-text3', {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '#camera-section-text3',
+                toggleActions: "play play play reverse",
+                start: 'top 70%',
+                end: 'bottom 0%',
+            }
+        })
+        gsap.to('#camera-section-text4', {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '#camera-section-text4',
+                toggleActions: "play play play reverse",
+                start: 'top 70%',
+                end: 'bottom 0%',
+            }
+        })
         gsap.to('#camera-section-chameleon-image', {
             scale: 1,
             scrollTrigger: {
@@ -111,6 +146,15 @@ const CameraSection = () => {
                 start: 'top 80%',
                 end: 'top 40%',
                 scrub: true,
+            }
+        })
+        gsap.to('#camera-section-iphone-image1', {
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '#camera-section-iphone-image1',
+                toggleActions: "play play play reverse",
+                start: 'top 70%',
+                end: 'bottom 0%',
             }
         })
     })
@@ -216,7 +260,7 @@ const CameraSection = () => {
             </div>
             <div className="w-full flex-center">
                 <div className="w-full flex-center md:block max-w-[980px]">
-                    <p className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[280px] md:max-w-[325px] md:ml-10 lg:ml-40'>With iPhone 15 Pro, you have multiple focal lengths to work with. It’s like having <strong className='text-white font-semibold'>seven pro lenses in your pocket</strong>, everywhere you go.</p>
+                    <p id='camera-section-text2' className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[280px] md:max-w-[325px] md:ml-10 lg:ml-40 opacity-0 translate-y-20'>With iPhone 15 Pro, you have multiple focal lengths to work with. It’s like having <strong className='text-white font-semibold'>seven pro lenses in your pocket</strong>, everywhere you go.</p>
                 </div>
             </div>
 
@@ -295,11 +339,11 @@ const CameraSection = () => {
             <div className="w-full flex justify-around max-w-[980px] py-[70px] md:py-[100px]">
                 <div className="w-full flex flex-col md:flex-row items-center justify-center gap-[45px] md:gap-[60px] lg:gap-[80px] pt-[80px] md:py-[60px]">
                     <div className="">
-                        <img className='w-[275px] md:w-auto' src={cameraSection48mpMainCameraImg} alt="An iPhone 15 Pro showing a photo of a person being taken using 2x optical zoom" />
+                        <img id='camera-section-iphone-image1' className='w-[275px] md:w-auto opacity-0' src={cameraSection48mpMainCameraImg} alt="An iPhone 15 Pro showing a photo of a person being taken using 2x optical zoom" />
                     </div>
                     <div className="typography-site-body max-w-[280px] md:max-w-[325px]">
-                        <p>The 48MP Main camera is more advanced than ever, capturing super‑high‑resolution photos with a <strong className='text-[#f5f5f7] font-semibold'>new level of detail and color</strong>.</p>
-                        <p className='mt-4 md:mt-5'>You’ll see the improvements in your portraits. And now you no longer have to switch to Portrait mode. If your subject is a person, dog, or cat, iPhone automatically captures depth information. So you can choose to instantly <strong className='text-[#f5f5f7] font-semibold'>see your photo as a portrait</strong>, with an artful blur effect. Or later in the Photos app.</p>
+                        <p id='camera-section-text3' className='opacity-0 translate-y-20'>The 48MP Main camera is more advanced than ever, capturing super‑high‑resolution photos with a <strong className='text-[#f5f5f7] font-semibold'>new level of detail and color</strong>.</p>
+                        <p id='camera-section-text4' className='mt-4 md:mt-5 opacity-0 translate-y-20'>You’ll see the improvements in your portraits. And now you no longer have to switch to Portrait mode. If your subject is a person, dog, or cat, iPhone automatically captures depth information. So you can choose to instantly <strong className='text-[#f5f5f7] font-semibold'>see your photo as a portrait</strong>, with an artful blur effect. Or later in the Photos app.</p>
                     </div>
                 </div>
             </div>
@@ -317,8 +361,9 @@ const CameraSection = () => {
                     <RiAddLine className="p-[2px] text-[36px] text-white opacity-80 group-hover:opacity-100 transition-all duration-200 ease-in-out" />
                 </span>
             </button>
-
         </div>
+
+        <CameraSectionModal visible={isModalVisible} handleClick={() => setModalVisible(false)}/>
     </section>
   )
 }
