@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { carouselImg1, carouselImg2, carouselImg3, carouselImg4, carouselImg5, carouselImg6, carouselImg7, chameleonImg, chipImg, stylizedChipImg, trueIntelligenceImg } from '../utils'
+import { cameraSection48mpMainCameraImg, carouselImg1, carouselImg2, carouselImg3, carouselImg4, carouselImg5, carouselImg6, carouselImg7, chameleonImg, chipImg, stylizedChipImg, trueIntelligenceImg } from '../utils'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { RiAddLine } from 'react-icons/ri'
@@ -89,18 +89,18 @@ const CameraSection = () => {
         gsap.to('#camera-section-heading', {
             opacity: 1,
             scrollTrigger: {
-                trigger: '#camera-section-text1',
-                start: 'top 70%',
-                end: 'bottom 5%',
+                trigger: '#camera-section-heading',
+                start: 'top 80%',
+                end: 'top 40%',
                 scrub: true,
             }
         })
         gsap.to('#camera-section-text1', {
             opacity: 1,
             scrollTrigger: {
-                trigger: '#camera-section-text1',
-                start: 'top 70%',
-                end: 'bottom 5%',
+                trigger: '#camera-section-heading',
+                start: 'top 80%',
+                end: 'top 40%',
                 scrub: true,
             }
         })
@@ -108,7 +108,7 @@ const CameraSection = () => {
             scale: 1,
             scrollTrigger: {
                 trigger: '#camera-section-chameleon-image',
-                start: 'top 70%',
+                start: 'top 80%',
                 end: 'top 40%',
                 scrub: true,
             }
@@ -147,51 +147,51 @@ const CameraSection = () => {
         })
     }, [])
 
-    const [imageInViewId, setImageInViewId] = useState(0);
-    const [translateX, setTranslateX] = useState(0);
+    // const [imageInViewId, setImageInViewId] = useState(0);
+    // const [translateX, setTranslateX] = useState(0);
 
-    const handleClickForward = () => {
-        if(translateX > -1500){
-            setTranslateX(prevTranslateX => prevTranslateX - 300);
-        } else if(translateX <= -1500){
-            setTranslateX(0);
-        }else{
-            null
-        }
-    };
-    const handleClickBackward = () => {
-        if(translateX < 0){
-            setTranslateX(prevTranslateX => prevTranslateX + 300);
-        }else if(translateX >= 0){
-            setTranslateX(-1500);
-        }else{
-            null
-        }
-    };
+    // const handleClickForward = () => {
+    //     if(translateX > -1500){
+    //         setTranslateX(prevTranslateX => prevTranslateX - 300);
+    //     } else if(translateX <= -1500){
+    //         setTranslateX(0);
+    //     }else{
+    //         null
+    //     }
+    // };
+    // const handleClickBackward = () => {
+    //     if(translateX < 0){
+    //         setTranslateX(prevTranslateX => prevTranslateX + 300);
+    //     }else if(translateX >= 0){
+    //         setTranslateX(-1500);
+    //     }else{
+    //         null
+    //     }
+    // };
 
-    const handleCarousel = (direction) => {
-        switch (direction) {
-            case 'forward':
-                if(imageInViewId >= 4){
-                    setImageInViewId(0);
-                } else {
-                    setImageInViewId((prev) => prev + 1);                    
-                }
-                handleClickForward();
-                break;
-            case 'backward':
-                if(imageInViewId <= 0 ){
-                    setImageInViewId(0);
-                } else {
-                    setImageInViewId((prev) => prev - 1);
-                }
-                handleClickBackward();
-                break;
-            default:
-                break;
-        }
-        console.log(imageInViewId)
-    }
+    // const handleCarousel = (direction) => {
+    //     switch (direction) {
+    //         case 'forward':
+    //             if(imageInViewId >= 4){
+    //                 setImageInViewId(0);
+    //             } else {
+    //                 setImageInViewId((prev) => prev + 1);                    
+    //             }
+    //             handleClickForward();
+    //             break;
+    //         case 'backward':
+    //             if(imageInViewId <= 0 ){
+    //                 setImageInViewId(0);
+    //             } else {
+    //                 setImageInViewId((prev) => prev - 1);
+    //             }
+    //             handleClickBackward();
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    //     console.log(imageInViewId)
+    // }
     
 
   return (
@@ -206,8 +206,8 @@ const CameraSection = () => {
                     <img src={chameleonImg} alt="" />
                 </div> */}
             </div>
-            <div className="relative w-screen mt-[17px] mb-[60px] ml-[66px] overflow-clip">
-                    <img id='camera-section-chameleon-image' className='w-[1314px] scale-125' src={chameleonImg} alt="A green iguana, captured by the 48MP Main camera" />
+            <div className="relative w-screen mt-[17px] mb-[60px] md:ml-[66px] overflow-clip">
+                    <img id='camera-section-chameleon-image' className='md:w-[1314px] scale-125' src={chameleonImg} alt="A green iguana, captured by the 48MP Main camera" />
             </div>
             <div className="w-full flex-center mt-[-53px] md:mt-[-116px] lg:mt-[-151px] mb-[94px] md:mb-[138px] lg:mb-[168px] z-10">
                 <div className="w-full max-w-[980px] flex-center md:block">
@@ -291,6 +291,26 @@ const CameraSection = () => {
                     </button>
                 </div>
             </div>
+
+            <div className="w-full flex justify-around max-w-[980px] py-[70px] md:py-[100px]">
+                <div className="w-full flex flex-col md:flex-row items-center justify-center gap-[45px] md:gap-[60px] lg:gap-[80px] pt-[80px] md:py-[60px]">
+                    <div className="">
+                        <img className='w-[275px] md:w-auto' src={cameraSection48mpMainCameraImg} alt="An iPhone 15 Pro showing a photo of a person being taken using 2x optical zoom" />
+                    </div>
+                    <div className="typography-site-body max-w-[280px] md:max-w-[325px]">
+                        <p>The 48MP Main camera is more advanced than ever, capturing super‑high‑resolution photos with a <strong className='text-[#f5f5f7] font-semibold'>new level of detail and color</strong>.</p>
+                        <p className='mt-4 md:mt-5'>You’ll see the improvements in your portraits. And now you no longer have to switch to Portrait mode. If your subject is a person, dog, or cat, iPhone automatically captures depth information. So you can choose to instantly <strong className='text-[#f5f5f7] font-semibold'>see your photo as a portrait</strong>, with an artful blur effect. Or later in the Photos app.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='w-full flex-center bg-black border-t border-t-[#424245] outline-0 max-w-[692px] md:max-w-[980px]'>
+                <strong className='mt-[100px] md:mt-[135px] lg:mt-[161px] text-[32px] md:text-[40px] leading-[1.125] md:leading-[1.1] font-semibold tracking-[.004em] md:tracking-[0em] text-[#f5f5f7] max-w-[280px] md:max-w-[692px] lg:max-w-[980px] text-center'>
+                    Shoot magical spatial videos,
+                    <br />then relive them on Apple Vision Pro
+                </strong>
+            </div>
+
             <button onClick={() => setModalVisible(true)} id='camera-section-button-id' className='scale-0 size-[70px] border-[12px] border-blue mt-[50px] md:mt-[100px] sticky bottom-[30px] flex items-center bg-gray-300 backdrop-blur rounded-full group z-[500]'>
                 <span id='camera-section-span-id' className="scale-0 ml-[32px] mr-[24px] text-[14px] md:text-[16px] leading-[1.381002381] font-semibold tracking-normal max-w-[30em] text-white">Zoom in on the camera</span>
                 <span id='camera-section-span-id' className="scale-0 flex-center bg-[#0071e3] rounded-[50%] mr-[10px]">

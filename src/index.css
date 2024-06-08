@@ -82,7 +82,7 @@ canvas {
   }
 
   .common-padding {
-    @apply sm:py-[200px] py-[100px] sm:px-10 px-5
+    @apply sm:py-[200px] py-[100px] sm:px-10 px-8
   }
 
   .section-heading {

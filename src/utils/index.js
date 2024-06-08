@@ -50,6 +50,7 @@ import carouselImage4 from "/assets/images/carousel-image-4.jpg"
 import carouselImage5 from "/assets/images/carousel-image-5.jpg"
 import carouselImage6 from "/assets/images/carousel-image-6.jpg"
 import carouselImage7 from "/assets/images/carousel-image-7.jpg"
+import cameraSection48mpMainCamera from "/assets/images/camera_section_48mp_main_camera.jpg"
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
@@ -99,3 +100,4 @@ export const carouselImg4 = carouselImage4;
 export const carouselImg5 = carouselImage5;
 export const carouselImg6 = carouselImage6;
 export const carouselImg7 = carouselImage7;
+export const cameraSection48mpMainCameraImg = cameraSection48mpMainCamera;
