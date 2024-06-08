@@ -115,7 +115,8 @@ const Model = () => {
                 <div id='control-buttons-con' className="mt-16 flex-center flex-col sticky bottom-10 translate-y-[100px]">
                     <p id='desc' className='bg-[#0000004D] rounded-[5px] px-1.5 py-1 backdrop-blur max-w-xs md:max-w-md text-center text-pretty text-xs font-semibold text-white transition-all duration-300 ease-in-out opacity-0'>{iphoneDescription}</p>
                     <div aria-label='Iphone color selector container' id='control-buttons-wrapper' className="scale-0 size-[70px] border-[12px] border-blue py-0 px-0 bg-gray-300 backdrop-blur rounded-full flex-center gap-3 mt-2.5 md:mt-3.5">
-                        <button 
+                        <button
+                        type='radio'
                         id="radio-button"
                         aria-label='Click to show 6.1” iPhone 15 Pro1 in four colors' 
                         aria-haspopup={true} 
@@ -127,6 +128,7 @@ const Model = () => {
                         </button>
 
                         <button 
+                        type="radio"
                         id="radio-button"
                         aria-label='Click to show 6.7” iPhone 15 Pro Max1 and
                         6.1” iPhone 15 Pro1 in Natural Titanium' 
@@ -140,6 +142,7 @@ const Model = () => {
                         </button>
                         
                         <button
+                        type="radio"
                         id="radio-button"
                         aria-label='Click to show 6.7” iPhone 15 Pro Max1 and
                         6.1” iPhone 15 Pro1 in Blue Titanium' 
@@ -152,6 +155,7 @@ const Model = () => {
                         </button>
 
                         <button 
+                        type="radio"
                         id="radio-button"
                         aria-label='Click to show 6.7” iPhone 15 Pro Max1 and
                         6.1” iPhone 15 Pro1 in White Titanium' 
@@ -164,6 +168,7 @@ const Model = () => {
                         </button>
 
                         <button
+                        type="radio"
                         id="radio-button"
                         aria-label='Click to show 6.7” iPhone 15 Pro Max1 and
                         6.1” iPhone 15 Pro1 in Black Titanium' 

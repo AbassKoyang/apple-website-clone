@@ -3,6 +3,7 @@ import { carouselImg1, carouselImg2, carouselImg3, carouselImg4, carouselImg5, c
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { RiAddLine } from 'react-icons/ri'
+import { MdOutlineChevronLeft, MdOutlineChevronRight } from 'react-icons/md'
 import { ScrollTrigger } from 'gsap/all';
 import { Swiper, SwiperSlide, } from 'swiper/react';
 import 'swiper/css/navigation';
@@ -13,7 +14,6 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
-import { GoChevronLeft, GoChevronRight } from 'react-icons/go'
 
 const images = [
   {
@@ -48,15 +48,50 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CameraSection = () => {
     const [isModalVisible, setModalVisible] = useState(false);
+    const [carouselLabel, setCarouselLabel] = useState('');
+    const [carouselIndex, setCarouselIndex] = useState(0);
+
+    useEffect(() => {
+        switch (carouselIndex) {
+          case 0:
+              setCarouselLabel(<p className={`m-0 p-0 text-[16px] md:text-[19px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray transition-all duration-300 ease-in-out ${carouselIndex === 0 ? 'opacity-100' : 'opacity-0'}`}><strong className="text-[#f5f5f7] font-semibold">0.5x</strong> Ultra Wide | Macro</p>);
+              break;
+          case 1:
+              setCarouselLabel(<p className={`m-0 p-0 text-[16px] md:text-[19px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray transition-all duration-300 ease-in-out ${carouselIndex === 1 ? 'opacity-100' : 'opacity-0'}`}><strong className="text-[#f5f5f7] font-semibold">1x</strong> Main | 24mm</p>);
+              break;
+          case 2:
+              setCarouselLabel(<p className={`m-0 p-0 text-[16px] md:text-[19px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray transition-all duration-300 ease-in-out ${carouselIndex === 2 ? 'opacity-100' : 'opacity-0'}`}><strong className="text-[#f5f5f7] font-semibold">1x</strong> Main | 28mm</p>);
+              break;
+          case 3:
+              setCarouselLabel(<p className={`m-0 p-0 text-[16px] md:text-[19px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray transition-all duration-300 ease-in-out ${carouselIndex === 3 ? 'opacity-100' : 'opacity-0'}`}><strong className="text-[#f5f5f7] font-semibold">1x</strong> Main | 35mm</p>);
+              break;
+          case 4:
+              setCarouselLabel(<p className={`m-0 p-0 text-[16px] md:text-[19px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray transition-all duration-300 ease-in-out ${carouselIndex === 4 ? 'opacity-100' : 'opacity-0'}`}><strong className="text-[#f5f5f7] font-semibold">2x</strong> Telephoto | 48mm</p>);
+              break;
+          case 5:
+              setCarouselLabel(<p className={`m-0 p-0 text-[16px] md:text-[19px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray transition-all duration-300 ease-in-out ${carouselIndex === 5 ? 'opacity-100' : 'opacity-0'}`}><strong className="text-[#f5f5f7] font-semibold">New 5x</strong> Telephoto | 120 mm</p>);
+              break;
+        
+          default:
+              setCarouselLabel(<p className={`m-0 p-0 text-[16px] md:text-[19px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray transition-all duration-300 ease-in-out ${carouselIndex === 0 ? 'opacity-100' : 'opacity-0'}`}><strong className="text-[#f5f5f7] font-semibold">0.5x</strong> Ultra Wide | Macro</p>)
+              break;
+        }
+      }, [carouselIndex])
+
+      const handleCarouselNextButtonClick = () => {
+        setCarouselIndex((prev) => prev + 1);
+      }
+      const handleCarouselPrevButtonClick = () => {
+        setCarouselIndex((prev) => prev - 1);
+      }
 
     useGSAP(() => {
         gsap.to('#camera-section-heading', {
             opacity: 1,
             scrollTrigger: {
-                trigger: '#camera-section-heading',
-                toggleActions: "play none none none",
+                trigger: '#camera-section-text1',
                 start: 'top 70%',
-                end: 'top 10%',
+                end: 'bottom 5%',
                 scrub: true,
             }
         })
@@ -64,9 +99,8 @@ const CameraSection = () => {
             opacity: 1,
             scrollTrigger: {
                 trigger: '#camera-section-text1',
-                toggleActions: "play play play play",
                 start: 'top 70%',
-                end: 'top 10%',
+                end: 'bottom 5%',
                 scrub: true,
             }
         })
@@ -74,7 +108,6 @@ const CameraSection = () => {
             scale: 1,
             scrollTrigger: {
                 trigger: '#camera-section-chameleon-image',
-                toggleActions: "play play play play",
                 start: 'top 70%',
                 end: 'top 40%',
                 scrub: true,
@@ -176,14 +209,14 @@ const CameraSection = () => {
             <div className="relative w-screen mt-[17px] mb-[60px] ml-[66px] overflow-clip">
                     <img id='camera-section-chameleon-image' className='w-[1314px] scale-125' src={chameleonImg} alt="A green iguana, captured by the 48MP Main camera" />
             </div>
-            <div className="w-full flex-center mt-[-151px] mb-[168px] z-10">
-                <div className="w-full max-w-[980px]">
-                    <p className='p-0 text-[16px] md:text-[19px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray'>A green iguana, captured by the 48MP Main camera</p>
+            <div className="w-full flex-center mt-[-53px] md:mt-[-116px] lg:mt-[-151px] mb-[94px] md:mb-[138px] lg:mb-[168px] z-10">
+                <div className="w-full max-w-[980px] flex-center md:block">
+                    <p className='p-0 text-[16px] md:text-[19px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[280px] md:max-w-fit md:ml-10 lg:ml-0'>A green iguana, captured by the 48MP Main camera</p>
                 </div>
             </div>
             <div className="w-full flex-center">
-                <div className="w-full max-w-[980px]">
-                    <p className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray md:max-w-[325px] lg:ml-28'>With iPhone 15 Pro, you have multiple focal lengths to work with. It’s like having <strong className='text-white font-semibold'>seven pro lenses in your pocket</strong>, everywhere you go.</p>
+                <div className="w-full flex-center md:block max-w-[980px]">
+                    <p className='text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[280px] md:max-w-[325px] md:ml-10 lg:ml-40'>With iPhone 15 Pro, you have multiple focal lengths to work with. It’s like having <strong className='text-white font-semibold'>seven pro lenses in your pocket</strong>, everywhere you go.</p>
                 </div>
             </div>
 
@@ -199,7 +232,7 @@ const CameraSection = () => {
             <button onClick={() => handleCarousel('forward')}>Forward</button>
             <button onClick={() => handleCarousel('backward')}>Backward</button> */}
 
-            <div className="w-screen h-fit pt-[60px]">
+            <div className="w-screen h-fit pt-[27px] md:pt-[60px]">
                             <Swiper
                     effect={'coverflow'}
                     grabCursor={true}
@@ -220,35 +253,42 @@ const CameraSection = () => {
                     }}
                     modules={[EffectCoverflow, Navigation]}
                     className="w-full"
+                    aria-label='Carousel'
                 >
-                    <SwiperSlide  className="w-[653px] h-[490px]">
-                    <img className="w-full h-full" src={carouselImg1} />
+                    <SwiperSlide  className="w-[274px] h-[365px] md:w-[653px] md:h-[490px]">
+                    <img className="w-full h-full object-cover" src={carouselImg1} />
                     </SwiperSlide>
-                    <SwiperSlide  className="w-[653px] h-[490px]">
-                    <img className="w-full h-full" src={carouselImg2} />
+                    <SwiperSlide  className="w-[274px] h-[365px] md:w-[653px] md:h-[490px]">
+                    <img className="w-full h-full object-cover" src={carouselImg2} />
                     </SwiperSlide>
-                    <SwiperSlide  className="w-[653px] h-[490px]">
-                    <img className="w-full h-full" src={carouselImg3} />
+                    <SwiperSlide  className="w-[274px] h-[365px] md:w-[653px] md:h-[490px]">
+                    <img className="w-full h-full object-cover" src={carouselImg3} />
                     </SwiperSlide>
-                    <SwiperSlide  className="w-[653px] h-[490px]">
-                    <img className="w-full h-full" src={carouselImg4} />
+                    <SwiperSlide  className="w-[274px] h-[365px] md:w-[653px] md:h-[490px]">
+                    <img className="w-full h-full object-cover" src={carouselImg4} />
                     </SwiperSlide>
-                    <SwiperSlide  className="w-[653px] h-[490px]">
-                    <img className="w-full h-full" src={carouselImg5} />
+                    <SwiperSlide  className="w-[274px] h-[365px] md:w-[653px] md:h-[490px]">
+                    <img className="w-full h-full object-cover" src={carouselImg5} />
                     </SwiperSlide>
-                    <SwiperSlide  className="w-[653px] h-[490px]">
-                    <img className="w-full h-full" src={carouselImg6} />
+                    <SwiperSlide  className="w-[274px] h-[365px] md:w-[653px] md:h-[490px]">
+                    <img className="w-full h-full object-cover" src={carouselImg6} />
                     </SwiperSlide>
-                    <SwiperSlide  className="w-[653px] h-[490px]">
-                    <img className="w-full h-full" src={carouselImg7} />
+                    <SwiperSlide  className="w-[274px] h-[365px] md:w-[653px] md:h-[490px]">
+                    <img className="w-full h-full object-cover" src={carouselImg7} />
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <div className="w-full flex items-center justify-center max-w-[980px] relative">
-                <p>jkdksjdkj</p>
-                <div className="flex gap-4 items-center absolute right-0">
-                    <button className='carousel-prev-button rounded-full bg-gray-300 p-4'><GoChevronLeft /></button>
-                    <button className='carousel-next-button rounded-full bg-gray-300 p-4'><GoChevronRight /></button>
+            <div className="w-full flex md:items-center justify-center max-w-[980px] relative mt-10">
+                <p>{carouselLabel}</p>
+                <div className="flex gap-4 items-center mt-16 md:mt-0 absolute top-[50%] md:translate-y-[-50%] right-5 md:right-0">
+                    <button onClick={handleCarouselNextButtonClick} disabled={carouselIndex >= 5} aria-label='Next button' aria-description='Click this button to move to the next carousel slide' className='carousel-prev-button rounded-full bg-[#333336] size-[38px] flex-center disabled:opacity-50'>
+                        <title>Next button</title>
+                        <MdOutlineChevronLeft className='text-[35px] m-0 p-0' />
+                    </button>
+                    <button onClick={handleCarouselPrevButtonClick} disabled={carouselIndex <= 0} aria-label='Previous button' aria-description='Click this button to move to the previous carousel slide' className='carousel-next-button rounded-full bg-[#333336] size-[38px] flex-center disabled:opacity-50'>
+                        <title>Previous button</title>
+                        <MdOutlineChevronRight className='text-[35px] m-0 p-0' />
+                    </button>
                 </div>
             </div>
             <button onClick={() => setModalVisible(true)} id='camera-section-button-id' className='scale-0 size-[70px] border-[12px] border-blue mt-[50px] md:mt-[100px] sticky bottom-[30px] flex items-center bg-gray-300 backdrop-blur rounded-full group z-[500]'>

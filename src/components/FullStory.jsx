@@ -47,7 +47,7 @@ const FullStory = () => {
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
-              trigger: '#fullstory',
+              trigger: '#full-story',
               start: "top 20%", // Start animation when the top of the element hits 80% of the viewport height
               end: "bottom 20%", // End animation when the bottom of the element hits 20% of the viewport height
               toggleActions: "play none none reverse" // Play the animation on enter
