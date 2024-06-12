@@ -11,6 +11,12 @@ const CameraSectionModal = ({visible, handleClick}) => {
                     <RiCloseFill  className="text-[#f5f5f7] group-hover:text-white text-[25px]" />
                 </button>
             </div>
+
+            <div className="w-full max-w-[980px]">
+              <h1 className='ml-20 max-w-[734px] md:max-w-max text-[35px] md:text-[60px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1] tracking-[0em] md:tracking-[-0.015em] pt-[60px]'>iPhone. <br />Forged in titanium.</h1>
+            </div>
+
+            
         </div>
 
     </section>

@@ -48,6 +48,9 @@ canvas {
   margin-inline-end: auto;
   max-width: 280px;
 }
+.margin-inline-start{
+  margin-inline-start: auto;
+}
 .margin-inline-headline{
   @media screen and (max-width: 734px) {
     margin-inline-start: auto;
