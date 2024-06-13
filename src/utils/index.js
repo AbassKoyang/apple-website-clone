@@ -13,6 +13,9 @@ import framemv from "/assets/videos/frame.mp4";
 import fullStoryModalmv from "/assets/videos/fullstory-modal-large-video.mp4";
 import fullStoryModalCouplingmv from "/assets/videos/fullstory-modal-coupling-video.mp4";
 import gamemv from "/assets/videos/game-video.mp4"
+import cameraSectionModalVideo1 from "/assets/videos/camera_section_modal_video1.mp4"
+import cameraSectionModalVideo2 from "/assets/videos/camera_section_modal_video2.mp4"
+import cameraSectionModalVideo3 from "/assets/videos/camera_section_modal_video3.mp4"
 
 import apple from "/assets/images/apple.svg";
 import search from "/assets/images/search.svg";
@@ -50,7 +53,20 @@ import carouselImage4 from "/assets/images/carousel-image-4.jpg"
 import carouselImage5 from "/assets/images/carousel-image-5.jpg"
 import carouselImage6 from "/assets/images/carousel-image-6.jpg"
 import carouselImage7 from "/assets/images/carousel-image-7.jpg"
-import cameraSection48mpMainCamera from "/assets/images/camera_section_48mp_main_camera.jpg"
+import cameraSection48mpMainCamera from "/assets/images/camera_section_48mp_main_camera.jpg";
+import cameraSectionModalImage1 from "/assets/images/camera_section_modal_image1.jpg";
+import cameraSectionModalImage2 from "/assets/images/camera_section_modal_image2.jpg";
+import cameraSectionModalImage3 from "/assets/images/camera_section_modal_image3.jpg";
+import cameraSectionModalImage4 from "/assets/images/camera_section_modal_image4.jpg";
+import cameraSectionModalImage5 from "/assets/images/camera_section_modal_image5.jpg";
+import cameraSectionModalImage6 from "/assets/images/camera_section_modal_image6.jpg";
+import cameraSectionModalImage7 from "/assets/images/camera_section_modal_image7.jpg";
+import cameraSectionModalImage8 from "/assets/images/camera_section_modal_image8.jpg";
+import cameraSectionModalImage9 from "/assets/images/camera_section_modal_image9.jpg";
+import cameraSectionModalImage10 from "/assets/images/camera_section_modal_image10.jpg";
+import cameraSectionModalImage11 from "/assets/images/camera_section_modal_image11.jpg";
+import cameraSectionModalImage12 from "/assets/images/camera_section_modal_image12.jpg";
+import frame2 from "/assets/images/frame2.png";
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
@@ -101,3 +117,16 @@ export const carouselImg5 = carouselImage5;
 export const carouselImg6 = carouselImage6;
 export const carouselImg7 = carouselImage7;
 export const cameraSection48mpMainCameraImg = cameraSection48mpMainCamera;
+export const frame2Img = frame2;
+export const cameraSectionModalImg1 = cameraSectionModalImage1;
+export const cameraSectionModalImg2 = cameraSectionModalImage2;
+export const cameraSectionModalImg3 = cameraSectionModalImage3;
+export const cameraSectionModalImg4 = cameraSectionModalImage4;
+export const cameraSectionModalImg5 = cameraSectionModalImage5;
+export const cameraSectionModalImg6 = cameraSectionModalImage6;
+export const cameraSectionModalImg7 = cameraSectionModalImage7;
+export const cameraSectionModalImg8 = cameraSectionModalImage8;
+export const cameraSectionModalImg9 = cameraSectionModalImage9;
+export const cameraSectionModalImg10 = cameraSectionModalImage10;
+export const cameraSectionModalImg11 = cameraSectionModalImage11;
+export const cameraSectionModalImg12 = cameraSectionModalImage12;
