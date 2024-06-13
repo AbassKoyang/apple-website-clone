@@ -217,7 +217,7 @@ const FullStoryModal = ({visible, handleClick}) => {
             </div>
 
             <div className="w-full flex-center bg-zinc pt-[120px] px-12 md:px-0">
-              <div id="fullstory-modal-scaled-images-con" className="w-full md:max-w-[720px] lg:max-w-[980px] grid grid-row-2 md:grid-cols-2 md:gap-[50px]">
+              <div id="fullstory-modal-scaled-images-con" className="w-full md:max-w-[720px] lg:max-w-[980px] grid grid-rows-2 md:grid-cols-2 md:gap-[50px]">
                 <div className="row-span-1 md:col-span-1">
                   <div id='fullstory-modal-scaled-image-con' className="opacity-30 w-full h-[280px] md:h-[460px] object-contain bg-black flex-center pt-20 overflow-hidden">
                       <img id='fullstory-modal-scaled-image' className='scale-125 w-[106px] md:w-auto' src={fullStoryModalImage1img} alt="A side view of iPhone 15 Pro showing the fine‑brushed finish on the titanium bands" />

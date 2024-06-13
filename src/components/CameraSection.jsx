@@ -323,7 +323,7 @@ const CameraSection = () => {
                 </Swiper>
             </div>
             <div className="w-full flex md:items-center justify-center max-w-[980px] relative mt-10">
-                <p>{carouselLabel}</p>
+                {carouselLabel}
                 <div className="flex gap-4 items-center mt-16 md:mt-0 absolute top-[50%] md:translate-y-[-50%] right-5 md:right-0">
                     <button onClick={handleCarouselNextButtonClick} disabled={carouselIndex >= 5} aria-label='Next button' aria-description='Click this button to move to the next carousel slide' className='carousel-prev-button rounded-full bg-[#333336] size-[38px] flex-center disabled:opacity-50'>
                         <title>Next button</title>

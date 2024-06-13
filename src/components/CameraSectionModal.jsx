@@ -1,10 +1,59 @@
 import React from 'react'
 import { RiCloseFill } from 'react-icons/ri'
-import { cameraSectionModalImg1 } from '../utils'
+import { cameraSectionModalImg1, cameraSectionModalImg2, cameraSectionModalImg3 } from '../utils'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const CameraSectionModal = ({visible, handleClick}) => {
+
+  useGSAP(()=> {
+    gsap.to('#camera-section-modal-text1', {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+          trigger: '#camera-section-modal-text1',
+          toggleActions: "play play play reverse",
+          start: 'top 70%',
+          end: 'bottom 0%',
+          scroller: '#camera-section-modal',
+      }
+  })
+    gsap.to('#camera-section-modal-text2', {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+          trigger: '#camera-section-modal-text2',
+          toggleActions: "play play play reverse",
+          start: 'top 70%',
+          end: 'bottom 0%',
+          scroller: '#camera-section-modal',
+      }
+  })
+    gsap.to('#camera-section-modal-text3', {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+          trigger: '#camera-section-modal-text3',
+          toggleActions: "play play play reverse",
+          start: 'top 70%',
+          end: 'bottom 0%',
+          scroller: '#camera-section-modal',
+      }
+  })
+    gsap.to('#camera-section-modal-text4', {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+          trigger: '#camera-section-modal-text4',
+          toggleActions: "play play play reverse",
+          start: 'top 70%',
+          end: 'bottom 0%',
+          scroller: '#camera-section-modal',
+      }
+  })
+  }, [])
   return (
-    <section id='prochip-section-modal' className={`${visible ? 'block top-0' : 'top-[100%]'} fixed z-[1000] right-0 w-screen h-screen flex justify-center bg-gray-300 backdrop-blur transition-all duration-500 ease-in-out pl-6 pr-6 md:pl-[25px] md:pr-3 py-16 overflow-y-scroll`}>
+    <section id='camera-section-modal' className={`${visible ? 'block top-0' : 'top-[100%]'} fixed z-[1000] right-0 w-screen h-screen flex justify-center bg-gray-300 backdrop-blur transition-all duration-500 ease-in-out pl-6 pr-6 md:pl-[25px] md:pr-3 py-16 overflow-y-scroll`}>
 
         <div className="w-full max-w-[375px] md:max-w-[1400px] h-fit bg-black rounded-3xl relative flex-center flex-col pb-[100px]">
             <div className="w-full p-0 m-0 flex justify-end sticky top-0">
@@ -13,10 +62,36 @@ const CameraSectionModal = ({visible, handleClick}) => {
                 </button>
             </div>
 
-            <div className="w-full overflow-x-hidden flex-center">
-              <img className='w-full' src={cameraSectionModalImg1} alt="A beautiful photo shot on the iphone 15 pro of a woman laying closely to her reflection in rippled water on a black background"/>
-              <div className="w-[1420px] max-w-[980px] absolute top-[100px] left-[50%] translate-x-[-50%]">
-                <h1 className='ml-32 max-w-[280px] md:max-w-max text-[40px] md:text-[48px] lg:text-[64px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1.0834933333] lg:leading-[1.0625] tracking-[0em] md:tracking-[-0.003em] lg:tracking-[-0.009em] '>A camera that captures your wildest imagination.</h1>
+            <div className="w-full flex-center flex-col relative mb-[100px] lg:mb-[120px]">
+              <div className="w-full flex-center max-w-[980px] md:absolute md:top-[100px] md:left-[50%] md:translate-x-[-50%] md:pr-20">
+                <h1 className='mx-4 md:ml-20 max-w-[280px] md:max-w-[530px] lg:max-w-full text-[40px] md:text-[48px] lg:text-[64px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1.0834933333] lg:leading-[1.0625] tracking-[0em] md:tracking-[-0.003em] lg:tracking-[-0.009em] '>A camera that captures your wildest imagination.</h1>
+              </div>
+              <img className='w-[400px] md:w-[1048px] md:h-[698px] lg:h-fit lg:w-[1420px] md:object-cover' src={cameraSectionModalImg1} alt="A beautiful photo shot on the iphone 15 pro of a woman laying closely to her reflection in rippled water on a black background"/>
+            </div>
+
+            <div className="w-full flex-center md:px-[60px] lg:px-0">
+              <div className="w-full max-w-[980px] grid grid-cols-2 gap-[2px]">
+                <div className="col-span-1">
+                  <img className="md:w-[289px] lg:w-full" src={cameraSectionModalImg2} alt="Iphone camera" />
+                </div>
+                <div className="col-span-1">
+                  <div className="md:ml-[60px] lg:ml-20">
+                    <h3 className="typography-headline-secondary mb-[30px]">48MP camera. Mega <br /> powerful.</h3>
+                    <p id="camera-section-modal-text1" className='opacity-0 translate-y-20 mt-4 text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray md:max-w-[350px] lg:max-w-[325px]'>The advanced quad‑pixel sensor makes the most of 48 megapixels by adapting to what you’re shooting, so you get <strong className='text-[#f5f5f7] font-semibold'>low‑light photos with phenomenal detail</strong>. It also lets you scoot in closer with an additional 2x Telephoto.</p>
+                    <p id="camera-section-modal-text2" className='opacity-0 translate-y-20 mt-4 text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray md:max-w-[350px] lg:max-w-[325px]'>The new Photonic Engine combines the best pixels from a super‑high‑resolution image with another that’s optimized for light capture. So <strong className='text-[#f5f5f7] font-semibold'>you automatically get 24MP photos</strong>— that’s twice the resolution than before — for everyday shots with extra detail.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full flex-center mt-[100px] md:px-[60px] lg:px-0">
+              <div className="w-full max-w-[980px]">
+                <img className='w-full mb-[60px]' src={cameraSectionModalImg3} alt="An image of a  dark-skined model on afro shot by the iphone 15 pro" />
+                <div className="w-full flex md:justify-between lg:justify-around">
+                <p id="camera-section-modal-text3" className='opacity-0 translate-y-20 text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray md:max-w-[280px] lg:max-w-[325px]'>For the moments when you want to prioritize detail, you have<strong className='text-[#f5f5f7] font-semibold'>more pro options to choose from</strong>.</p>
+
+                <p id="camera-section-modal-text4" className='opacity-0 translate-y-20 text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray md:max-w-[280px] lg:max-w-[325px]'><strong className='text-[#f5f5f7] font-semibold'>48MP HEIF gives you four times more resolution than before</strong>, in a format that’s ready to share. Or shoot in 48MP ProRAW for precise control over color, detail, and dynamic range.</p>
+                </div>
               </div>
             </div>
         </div>
