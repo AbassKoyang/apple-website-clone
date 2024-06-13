@@ -1,5 +1,6 @@
 import React from 'react'
 import { RiCloseFill } from 'react-icons/ri'
+import { cameraSectionModalImg1 } from '../utils'
 
 const CameraSectionModal = ({visible, handleClick}) => {
   return (
@@ -12,8 +13,11 @@ const CameraSectionModal = ({visible, handleClick}) => {
                 </button>
             </div>
 
-            <div className="w-full max-w-[980px]">
-              <h1 className='ml-20 max-w-[734px] md:max-w-max text-[35px] md:text-[60px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1] tracking-[0em] md:tracking-[-0.015em] pt-[60px]'>iPhone. <br />Forged in titanium.</h1>
+            <div className="w-full overflow-x-hidden flex-center">
+              <img className='w-full' src={cameraSectionModalImg1} alt="A beautiful photo shot on the iphone 15 pro of a woman laying closely to her reflection in rippled water on a black background"/>
+              <div className="w-[1420px] max-w-[980px] absolute top-[100px] left-[50%] translate-x-[-50%]">
+                <h1 className='ml-32 max-w-[280px] md:max-w-max text-[40px] md:text-[48px] lg:text-[64px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1.0834933333] lg:leading-[1.0625] tracking-[0em] md:tracking-[-0.003em] lg:tracking-[-0.009em] '>A camera that captures your wildest imagination.</h1>
+              </div>
             </div>
         </div>
 
