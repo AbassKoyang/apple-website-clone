@@ -63,14 +63,14 @@ const CameraSectionModal = ({visible, handleClick}) => {
             </div>
 
             <div className="w-full flex-center flex-col relative mb-[100px] lg:mb-[120px]">
-              <div className="w-full flex-center max-w-[980px] md:absolute md:top-[100px] md:left-[50%] md:translate-x-[-50%] md:pr-20">
+              <div className="w-full flex-center md:max-w-[703.2px] lg:max-w-[980px] md:absolute md:top-[100px] md:left-[50%] md:translate-x-[-50%] md:pr-20">
                 <h1 className='mx-4 md:ml-20 max-w-[280px] md:max-w-[530px] lg:max-w-full text-[40px] md:text-[48px] lg:text-[64px] text-[#F5F5F7] font-semibold leading-[1.1] md:leading-[1.0834933333] lg:leading-[1.0625] tracking-[0em] md:tracking-[-0.003em] lg:tracking-[-0.009em] '>A camera that captures your wildest imagination.</h1>
               </div>
               <img className='w-[400px] md:w-[1048px] md:h-[698px] lg:h-fit lg:w-[1420px] md:object-cover' src={cameraSectionModalImg1} alt="A beautiful photo shot on the iphone 15 pro of a woman laying closely to her reflection in rippled water on a black background"/>
             </div>
 
-            <div className="w-full flex-center px-12 md:px-[40px] lg:px-0">
-              <div className="w-full max-w-[980px] grid grid-rows-2 md:grid-cols-2 gap-[2px]">
+            <div className="w-full flex-center px-12 md:px-[50px] lg:px-0">
+              <div className="w-fullmd:max-w-[703.2px] lg:max-w-[980px] max-w-[980px] grid grid-rows-2 md:grid-rows-none md:grid-cols-2 gap-[2px]">
                 <div className="row-span-1 md:col-span-1">
                   <img className="md:w-[289px] lg:w-full" src={cameraSectionModalImg2} alt="Iphone camera" />
                 </div>
@@ -84,8 +84,8 @@ const CameraSectionModal = ({visible, handleClick}) => {
               </div>
             </div>
 
-            <div className="w-full flex-center mt-[100px] px-2 md:px-[40px] lg:px-0">
-              <div className="w-full max-w-[980px]">
+            <div className="w-full flex-center mt-[100px] px-2 md:px-[50px] lg:px-0">
+              <div className="w-full md:max-w-[703.2px] lg:max-w-[980px]">
                 <img className='w-full mb-[60px]' src={cameraSectionModalImg3} alt="An image of a  dark-skined model on afro shot by the iphone 15 pro" />
                 <div className="w-full flex flex-col md:flex-row justify-center md:justify-between lg:justify-around px-8 md:px-0">
                 <p id="camera-section-modal-text3" className='opacity-0 translate-y-20 text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray md:max-w-[280px] lg:max-w-[325px]'>For the moments when you want to prioritize detail, you have<strong className='text-[#f5f5f7] font-semibold'> more pro options to choose from</strong>.</p>
@@ -95,22 +95,22 @@ const CameraSectionModal = ({visible, handleClick}) => {
               </div>
             </div>
 
-            <div className="w-full flex-center mt-[100px] px-12 md:px-[40px] lg:px-0">
-              <div className="w-full max-w-[980px]">
-                <h3 className='typography-headline-secondary mb-[30px]'>What’s your Main mm?</h3>
-                <p id="camera-section-modal-text5" className=' text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[280px] md:max-w-[330px] mt-4 mb-10'>Now you can choose your default Main camera lens —<strong className='text-[#f5f5f7] font-semibold'> 24 mm, 28 mm, or 35 mm</strong>all without having to carry around extra gear. That’s the power of computational photography.</p>
+            <div className="w-full flex-center mt-[100px] px-12 md:px-[50px] lg:px-0">
+              <div className="w-full md:max-w-[703.2px] lg:max-w-[980px]">
+                <h3 className='typography-headline-secondary mb-[30px] lg:ml-20 max-w-[290px]'>What’s your Main mm?</h3>
+                <p id="camera-section-modal-text5" className=' text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[280px] md:max-w-[330px] mt-4 mb-10 lg:mb-[60px] lg:ml-20'>Now you can choose your default Main camera lens —<strong className='text-[#f5f5f7] font-semibold'> 24 mm, 28 mm, or 35 mm</strong>all without having to carry around extra gear. That’s the power of computational photography.</p>
                 <div className="w-full flex flex-col md:flex-row justify-center md:justify-between gap-[26px] md:gap-0">
                   <div className="">
-                    <img className="w-[281px] md:w-[224px]" src={cameraSectionModalImg4} alt="A photoshoot in 24mm of a woman" />
+                    <img className="w-[281px] md:w-[224px] lg:w-[310px]" src={cameraSectionModalImg4} alt="A photoshoot in 24mm of a woman" />
                     <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>24 mm</p>
                   </div>
                   <div className="">
-                    <img className="w-[281px] md:w-[224px]" src={cameraSectionModalImg5} alt="A photoshoot in 24mm of a woman" />
-                    <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>24 mm</p>
+                    <img className="w-[281px] md:w-[224px] lg:w-[310px]" src={cameraSectionModalImg5} alt="A photoshoot in 24mm of a woman" />
+                    <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>28 mm</p>
                   </div>
                   <div className="">
-                    <img className="w-[281px] md:w-[224px]" src={cameraSectionModalImg6} alt="A photoshoot in 24mm of a woman" />
-                    <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>24 mm</p>
+                    <img className="w-[281px] md:w-[224px] lg:w-[310px]" src={cameraSectionModalImg6} alt="A photoshoot in 24mm of a woman" />
+                    <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>35 mm</p>
                   </div>
                 </div>
               </div>
