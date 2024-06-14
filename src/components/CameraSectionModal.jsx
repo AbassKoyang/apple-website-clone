@@ -1,6 +1,6 @@
 import React from 'react'
 import { RiCloseFill } from 'react-icons/ri'
-import { cameraSectionModalImg1, cameraSectionModalImg2, cameraSectionModalImg3 } from '../utils'
+import { cameraSectionModalImg1, cameraSectionModalImg2, cameraSectionModalImg3, cameraSectionModalImg4, cameraSectionModalImg5, cameraSectionModalImg6 } from '../utils'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
@@ -69,7 +69,7 @@ const CameraSectionModal = ({visible, handleClick}) => {
               <img className='w-[400px] md:w-[1048px] md:h-[698px] lg:h-fit lg:w-[1420px] md:object-cover' src={cameraSectionModalImg1} alt="A beautiful photo shot on the iphone 15 pro of a woman laying closely to her reflection in rippled water on a black background"/>
             </div>
 
-            <div className="w-full flex-center px-12 md:px-[60px] lg:px-0">
+            <div className="w-full flex-center px-12 md:px-[40px] lg:px-0">
               <div className="w-full max-w-[980px] grid grid-rows-2 md:grid-cols-2 gap-[2px]">
                 <div className="row-span-1 md:col-span-1">
                   <img className="md:w-[289px] lg:w-full" src={cameraSectionModalImg2} alt="Iphone camera" />
@@ -84,13 +84,34 @@ const CameraSectionModal = ({visible, handleClick}) => {
               </div>
             </div>
 
-            <div className="w-full flex-center mt-[100px] px-2 md:px-[60px] lg:px-0">
+            <div className="w-full flex-center mt-[100px] px-2 md:px-[40px] lg:px-0">
               <div className="w-full max-w-[980px]">
                 <img className='w-full mb-[60px]' src={cameraSectionModalImg3} alt="An image of a  dark-skined model on afro shot by the iphone 15 pro" />
                 <div className="w-full flex flex-col md:flex-row justify-center md:justify-between lg:justify-around px-8 md:px-0">
                 <p id="camera-section-modal-text3" className='opacity-0 translate-y-20 text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray md:max-w-[280px] lg:max-w-[325px]'>For the moments when you want to prioritize detail, you have<strong className='text-[#f5f5f7] font-semibold'> more pro options to choose from</strong>.</p>
 
                 <p id="camera-section-modal-text4" className='opacity-0 translate-y-20 text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray md:max-w-[280px] lg:max-w-[325px] mt-5 md:mt-0'><strong className='text-[#f5f5f7] font-semibold'>48MP HEIF gives you four times more resolution than before</strong>, in a format that’s ready to share. Or shoot in 48MP ProRAW for precise control over color, detail, and dynamic range.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full flex-center mt-[100px] px-12 md:px-[40px] lg:px-0">
+              <div className="w-full max-w-[980px]">
+                <h3 className='typography-headline-secondary mb-[30px]'>What’s your Main mm?</h3>
+                <p id="camera-section-modal-text5" className=' text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[280px] md:max-w-[330px] mt-4 mb-10'>Now you can choose your default Main camera lens —<strong className='text-[#f5f5f7] font-semibold'> 24 mm, 28 mm, or 35 mm</strong>all without having to carry around extra gear. That’s the power of computational photography.</p>
+                <div className="w-full flex flex-col md:flex-row justify-center md:justify-between gap-[26px] md:gap-0">
+                  <div className="">
+                    <img className="w-[281px] md:w-[224px]" src={cameraSectionModalImg4} alt="A photoshoot in 24mm of a woman" />
+                    <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>24 mm</p>
+                  </div>
+                  <div className="">
+                    <img className="w-[281px] md:w-[224px]" src={cameraSectionModalImg5} alt="A photoshoot in 24mm of a woman" />
+                    <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>24 mm</p>
+                  </div>
+                  <div className="">
+                    <img className="w-[281px] md:w-[224px]" src={cameraSectionModalImg6} alt="A photoshoot in 24mm of a woman" />
+                    <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>24 mm</p>
+                  </div>
                 </div>
               </div>
             </div>
