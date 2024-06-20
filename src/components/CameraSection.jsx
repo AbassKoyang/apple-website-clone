@@ -157,6 +157,15 @@ const CameraSection = () => {
                 end: 'bottom 0%',
             }
         })
+        gsap.to('#camera-section-carousel-container', {
+            scale: 1,
+            scrollTrigger: {
+                trigger: '#camera-section-carousel-container',
+                toggleActions: "play play play reverse",
+                start: 'top 70%',
+                end: 'bottom 0%',
+            }
+        })
     })
 
     useGSAP(() => {
@@ -296,8 +305,9 @@ const CameraSection = () => {
                         clickable: true,
                     }}
                     modules={[EffectCoverflow, Navigation]}
-                    className="w-full"
+                    className="w-full scale-0"
                     aria-label='Carousel'
+                    id="camera-section-carousel-container"
                 >
                     <SwiperSlide  className="w-[274px] h-[365px] md:w-[653px] md:h-[490px]">
                     <img className="w-full h-full object-cover" src={carouselImg1} />

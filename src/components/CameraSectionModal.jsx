@@ -97,8 +97,8 @@ const CameraSectionModal = ({visible, handleClick}) => {
 
             <div className="w-full flex-center mt-[100px] px-12 md:px-[50px] lg:px-0">
               <div className="w-full md:max-w-[703.2px] lg:max-w-[980px]">
-                <h3 className='typography-headline-secondary mb-[30px] lg:ml-20 max-w-[290px]'>What’s your Main mm?</h3>
-                <p id="camera-section-modal-text5" className=' text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[280px] md:max-w-[330px] mt-4 mb-10 lg:mb-[60px] lg:ml-20'>Now you can choose your default Main camera lens —<strong className='text-[#f5f5f7] font-semibold'> 24 mm, 28 mm, or 35 mm</strong>all without having to carry around extra gear. That’s the power of computational photography.</p>
+                <h3 className='typography-headline-secondary mb-[30px] lg:ml-20 max-w-[290px] lg:max-w-full'>What’s your Main mm?</h3>
+                <p id="camera-section-modal-text5" className=' text-[16px] md:text-[21px] leading-[1.381002381] font-semibold tracking-[.0113em] text-gray max-w-[280px] md:max-w-[330px] lg:max-w-[500px] mt-4 mb-10 lg:mb-[60px] lg:ml-20'>Now you can choose your default Main camera lens —<strong className='text-[#f5f5f7] font-semibold'> 24 mm, 28 mm, or 35 mm</strong>all without having to carry around extra gear. That’s the power of computational photography.</p>
                 <div className="w-full flex flex-col md:flex-row justify-center md:justify-between gap-[26px] md:gap-0">
                   <div className="">
                     <img className="w-[281px] md:w-[224px] lg:w-[310px]" src={cameraSectionModalImg4} alt="A photoshoot in 24mm of a woman" />
@@ -106,7 +106,7 @@ const CameraSectionModal = ({visible, handleClick}) => {
                   </div>
                   <div className="">
                     <img className="w-[281px] md:w-[224px] lg:w-[310px]" src={cameraSectionModalImg5} alt="A photoshoot in 24mm of a woman" />
-                    <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>28 mm</p>
+                    <p className='text-[16px] md:text-[21px]   leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>28 mm</p>
                   </div>
                   <div className="">
                     <img className="w-[281px] md:w-[224px] lg:w-[310px]" src={cameraSectionModalImg6} alt="A photoshoot in 24mm of a woman" />
