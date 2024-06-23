@@ -80,6 +80,56 @@ const CameraSectionModal = ({visible, handleClick}) => {
           end: 'bottom 0%',
           scroller: '#camera-section-modal',
     }})
+    gsap.to('#camera-section-modal-text8', {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+          trigger: '#camera-section-modal-text8',
+          toggleActions: "play play play reverse",
+          start: 'top 70%',
+          end: 'bottom 0%',
+          scroller: '#camera-section-modal',
+    }})
+    gsap.to('#camera-section-modal-text9', {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+          trigger: '#camera-section-modal-text9',
+          toggleActions: "play play play reverse",
+          start: 'top 70%',
+          end: 'bottom 0%',
+          scroller: '#camera-section-modal',
+    }})
+    gsap.to('#camera-section-modal-text10', {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+          trigger: '#camera-section-modal-text10',
+          toggleActions: "play play play reverse",
+          start: 'top 70%',
+          end: 'bottom 0%',
+          scroller: '#camera-section-modal',
+    }})
+    gsap.to('#camera-section-modal-text11', {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+          trigger: '#camera-section-modal-text11',
+          toggleActions: "play play play reverse",
+          start: 'top 70%',
+          end: 'bottom 0%',
+          scroller: '#camera-section-modal',
+    }})
+    gsap.to('#camera-section-modal-text12', {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+          trigger: '#camera-section-modal-text12',
+          toggleActions: "play play play reverse",
+          start: 'top 70%',
+          end: 'bottom 0%',
+          scroller: '#camera-section-modal',
+    }})
 
 
 
@@ -87,7 +137,7 @@ const CameraSectionModal = ({visible, handleClick}) => {
     gsap.to('#camera-section-modal-image7', {
       opacity: 1,
       scrollTrigger: {
-          trigger: '#camera-section-image7',
+          trigger: '#camera-section-modal-image7',
           toggleActions: "play play play reverse",
           start: 'top 70%',
           end: 'bottom 0%',
@@ -146,15 +196,15 @@ const CameraSectionModal = ({visible, handleClick}) => {
                 <div className="w-full flex flex-col md:flex-row justify-center md:justify-between gap-[26px] md:gap-0">
                   <div className="">
                     <img className="w-[281px] md:w-[224px] lg:w-[310px]" src={cameraSectionModalImg4} alt="A photoshoot in 24mm of a woman" />
-                    <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>24 mm</p>
+                    <p id='camera-section-modal-text6' className='opacity-0 translate-y-20 text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>24 mm</p>
                   </div>
                   <div className="">
                     <img className="w-[281px] md:w-[224px] lg:w-[310px]" src={cameraSectionModalImg5} alt="A photoshoot in 24mm of a woman" />
-                    <p className='text-[16px] md:text-[21px]   leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>28 mm</p>
+                    <p id='camera-section-modal-text7' className='opacity-0 translate-y-20 text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>28 mm</p>
                   </div>
                   <div className="">
                     <img className="w-[281px] md:w-[224px] lg:w-[310px]" src={cameraSectionModalImg6} alt="A photoshoot in 24mm of a woman" />
-                    <p className='text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>35 mm</p>
+                    <p id='camera-section-modal-text8' className='opacity-0 translate-y-20 text-[16px] md:text-[21px] leading-[1.4211026316] font-semibold tracking-[.012em] text-gray mt-4'>35 mm</p>
                   </div>
                 </div>
               </div>
@@ -163,13 +213,18 @@ const CameraSectionModal = ({visible, handleClick}) => {
             <div className="w-full flex-center mt-[100px] md:mt-[120px] px-12 md:px-[50px] lg:px-0">
               <div className="w-full md:max-w-[703.2px] lg:max-w-[980px]">
               <h3 className='typography-headline-secondary mb-[30px] max-w-[290px] lg:max-w-full'>Next‑generation portraits.</h3>
-              <div className="w-full flex flex-col md:flex-row items-center justify-center gap-[45px] md:gap-[60px] lg:gap-[80px] pt-[80px] md:py-[60px]">
+              <div className="w-full flex flex-col md:flex-row items-center justify-center gap-[45px] md:gap-[60px] lg:gap-[80px] mt-[10px] md:mt-0 md:py-[60px] bg-blue">
                     <div className="">
-                        <img id='camera-section-modal-image7' className='w-[275px] md:w-[330px] opacity-0' src={cameraSectionModalImg7} alt="An iPhone 15 Pro showing a photo of a person being taken using 2x optical zoom" />
+                        <img id='camera-section-modal-image7' className='opacity-0 w-[275px] md:w-[330px]' src={cameraSectionModalImg7} alt="An iPhone 15 Pro showing a photo of a person being taken using 2x optical zoom" />
                     </div>
                     <div className="typography-site-body max-w-[280px] md:max-w-[293px] lg:max-w-[325px]">
-                        <p id='camera-section-modal-text6' className='opacity-0 translate-y-20'><strong className='text-[#f5f5f7] font-semibold'>The Photonic Engine supercharges your portraits</strong>, giving you beautiful detail, true-to-life color, zero shutter lag, and up to two times better low-light performance.</p>
-                        <p id='camera-section-modal-text7' className='mt-4 md:mt-5 opacity-0 translate-y-20'>Now<strong className='text-[#f5f5f7] font-semibold'>portraits can be Live Photos, too</strong>.</p>
+                        <p id='camera-section-modal-text9' className='opacity-0 translate-y-20'><strong className='text-[#f5f5f7] font-semibold'>The Photonic Engine supercharges your portraits</strong>, giving you beautiful detail, true-to-life color, zero shutter lag, and up to two times better low-light performance.</p>
+                        
+                        <p id='camera-section-modal-text10' className='mt-4 md:mt-4 opacity-0 translate-y-20'>Now<strong className='text-[#f5f5f7] font-semibold'> portraits can be Live Photos, too</strong>.</p>
+
+                        <p id='camera-section-modal-text11' className='mt-4 md:mt-4 opacity-0 translate-y-20'>In Portrait mode, you can <strong className='text-[#f5f5f7] font-semibold'>use continuous zoom to move in nice and close</strong>.</p>
+
+                        <p id='camera-section-modal-text12' className='mt-4 md:mt-4 opacity-0 translate-y-20'>And you can even <strong className='text-[#f5f5f7] font-semibold'>shift the focus between subjects after you take a shot</strong>.</p>
                     </div>
                 </div>
               </div>
