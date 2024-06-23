@@ -162,8 +162,9 @@ const CameraSection = () => {
             scrollTrigger: {
                 trigger: '#camera-section-carousel-container',
                 toggleActions: "play play play reverse",
-                start: 'top 70%',
-                end: 'bottom 0%',
+                start: 'top 80%',
+                end: 'top 40%',
+                scrub: true,
             }
         })
     })
@@ -305,7 +306,7 @@ const CameraSection = () => {
                         clickable: true,
                     }}
                     modules={[EffectCoverflow, Navigation]}
-                    className="w-full scale-0"
+                    className="w-full scale-50"
                     aria-label='Carousel'
                     id="camera-section-carousel-container"
                 >

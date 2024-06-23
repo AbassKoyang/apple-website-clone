@@ -165,11 +165,11 @@ const CameraSectionModal = ({visible, handleClick}) => {
               <h3 className='typography-headline-secondary mb-[30px] max-w-[290px] lg:max-w-full'>Next‑generation portraits.</h3>
               <div className="w-full flex flex-col md:flex-row items-center justify-center gap-[45px] md:gap-[60px] lg:gap-[80px] pt-[80px] md:py-[60px]">
                     <div className="">
-                        <img id='camera-section-modal-image7' className='w-[275px] md:w-auto opacity-0' src={cameraSectionModalImg7} alt="An iPhone 15 Pro showing a photo of a person being taken using 2x optical zoom" />
+                        <img id='camera-section-modal-image7' className='w-[275px] md:w-[330px] opacity-0' src={cameraSectionModalImg7} alt="An iPhone 15 Pro showing a photo of a person being taken using 2x optical zoom" />
                     </div>
-                    <div className="typography-site-body max-w-[280px] md:max-w-[325px]">
-                        <p id='camera-section-modal-text6' className='opacity-0 translate-y-20'>The 48MP Main camera is more advanced than ever, capturing super‑high‑resolution photos with a <strong className='text-[#f5f5f7] font-semibold'>new level of detail and color</strong>.</p>
-                        <p id='camera-section-modal-text7' className='mt-4 md:mt-5 opacity-0 translate-y-20'>You’ll see the improvements in your portraits. And now you no longer have to switch to Portrait mode. If your subject is a person, dog, or cat, iPhone automatically captures depth information. So you can choose to instantly <strong className='text-[#f5f5f7] font-semibold'>see your photo as a portrait</strong>, with an artful blur effect. Or later in the Photos app.</p>
+                    <div className="typography-site-body max-w-[280px] md:max-w-[293px] lg:max-w-[325px]">
+                        <p id='camera-section-modal-text6' className='opacity-0 translate-y-20'><strong className='text-[#f5f5f7] font-semibold'>The Photonic Engine supercharges your portraits</strong>, giving you beautiful detail, true-to-life color, zero shutter lag, and up to two times better low-light performance.</p>
+                        <p id='camera-section-modal-text7' className='mt-4 md:mt-5 opacity-0 translate-y-20'>Now<strong className='text-[#f5f5f7] font-semibold'>portraits can be Live Photos, too</strong>.</p>
                     </div>
                 </div>
               </div>
