@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Highlights from './components/Highlights';
@@ -17,6 +18,7 @@ const App = () => {
         <FullStory />
         <ProchipSection/>
         <CameraSection />
+        <Analytics />
       </main>
   )
 }
